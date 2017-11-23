@@ -130,6 +130,7 @@ body {
 }
 
 /* Exercise 7 */
+
 #exer-seven {
     font-size: 20px;
     width: 30%;
@@ -150,4 +151,41 @@ div.asteroid{
 
 p.asteroid{
     background-color: yellow;
+}
+
+/* Exercise 8 */
+
+#exer-eight1, #exer-eight2 {
+    border: 2px solid #4285f4;
+    background-color: #fff;
+    width: 704px;
+    margin: 3px;
+}
+
+#exer-eight1 {
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+#exer-eight2 {
+    background-color: #e67676;
+}
+
+#exer-eight1 p, #exer-eight2 p{
+    margin: 20px 5px 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+#exer-eight1 p:first-child, #exer-eight2 p:first-child{
+    margin-left: 15px;
+}
+
+#exer-eight1 p{
+    background-color: #4285f4;
+    display: inline-block;
+}
+#exer-eight2 p{
+    background-color: #643579;
+    display: inline-block;
 }
