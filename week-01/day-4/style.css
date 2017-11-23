@@ -106,3 +106,48 @@ body {
 #exer-five ol>li:last-child{
     color: black;
 }
+
+/* Exercise 6 */
+
+#exer-six1 p, #exer-six2 p{
+    background-color: #0cebde;
+    display: inline-block;
+    width: 140px;
+    border-radius: 70px;
+    text-align: center;
+    padding: 46px 0;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#exer-six1 p:first-child{
+    background-color: #b90ceb;
+}
+
+#exer-six2 p:last-child{
+    background-color: #ebbe0c;
+}
+
+/* Exercise 7 */
+#exer-seven {
+    font-size: 20px;
+    width: 30%;
+    margin: 5px;
+}
+
+.big{
+    color: blue;
+}
+
+#b325, .b326 {
+    border: 1px solid green;
+}
+
+div.asteroid{
+    font-weight: 700;
+}
+
+p.asteroid{
+    background-color: yellow;
+}
