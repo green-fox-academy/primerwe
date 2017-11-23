@@ -189,3 +189,35 @@ p.asteroid{
     background-color: #643579;
     display: inline-block;
 }
+
+/* Exercise 9 */
+
+#exer-nine {
+    width: 25%;
+    font-size: 16px;
+    /*border: 1px solid black;*/
+}
+
+#exer-nine p, #exer-nine h1 {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+#exer-nine h1 {
+    font-size: 2em;
+}
+
+#exer-nine p {
+    border: 3px solid #000;
+    border-top: none;
+    border-collapse: collapse;
+    padding: 15px;
+}
+#exer-nine p:last-child {
+    border-bottom: none;
+}
+
+#exer-nine p:nth-child(5) {
+    background-color: #e67676;
+}
