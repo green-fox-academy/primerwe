@@ -195,7 +195,6 @@ p.asteroid{
 #exer-nine {
     width: 25%;
     font-size: 16px;
-    /*border: 1px solid black;*/
 }
 
 #exer-nine p, #exer-nine h1 {
@@ -205,7 +204,7 @@ p.asteroid{
 }
 
 #exer-nine h1 {
-    font-size: 2em;
+    font-size: 18px;
 }
 
 #exer-nine p {
@@ -218,6 +217,6 @@ p.asteroid{
     border-bottom: none;
 }
 
-#exer-nine p:nth-child(5) {
+#exer-nine p:hover {
     background-color: #e67676;
 }
