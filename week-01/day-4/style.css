@@ -233,9 +233,8 @@ p.asteroid{
     text-align: center;
     display: block;
     margin: 10px auto;
-    width: 80%;
     color: white;
-    padding: 20px;
+    padding: 30px;
     background-image: url(duck.png);
 }
 
