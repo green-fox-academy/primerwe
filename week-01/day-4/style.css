@@ -2,6 +2,7 @@
 
 body {
     font-size: 36px;
+    margin: 0;
 }
 .font-opensans{
     font-family: 'Open Sans', sans-serif;
@@ -27,9 +28,6 @@ body {
     width: 355px;
     height: 520px;
 }
-#exer-two article{
-    
-}
 .north, .east, .south, .west {
     display: block;
     margin: auto;
@@ -49,4 +47,62 @@ body {
 }
 .west{
     background-color: #7692e4;
+}
+
+/* Exercise 3 */
+
+#exer-three1, #exer-three2 {
+    border: 15px solid #4285f4;
+    color: white;
+    margin: 2px;
+    width: 383px;
+}
+
+#exer-three1 .north {
+    padding: 50px 0;
+}
+#exer-three2 .south {
+    padding: 50px 0;
+}
+
+/* Exercise 4 */
+
+#exer-four p {
+    color: #f29e17;
+}
+
+#exer-four pre {
+    font-size: 20px;
+}
+
+/* Exercise 5 */
+
+#exer-five {
+    font-size: 18px;
+    width: 380px;
+    height: 340px;
+    margin: 5px;
+}
+
+#exer-five h1 {
+    font-size: 36px;
+    color: #e67676;
+}
+
+#exer-five h2 {
+    color: #8a2be2;
+}
+
+#exer-five ul{
+    list-style-type: square;
+}
+
+#exer-five ol>li{
+    list-style-type: upper-roman;
+    text-decoration: underline;
+    color: #ff19ff;
+}
+
+#exer-five ol>li:last-child{
+    color: black;
 }
