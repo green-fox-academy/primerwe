@@ -1,0 +1,52 @@
+/* Exercise 1 */
+
+body {
+    font-size: 36px;
+}
+.font-opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#exer-one article {
+    margin: 8px 4px;
+    width: 343px;
+    height: 138px;
+}
+.ex1{
+    background-color: #0e91a1;
+    border: 4px solid #7dce94;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+/* Exercise 2 */
+
+#exer-two {
+    border: 15px solid #4285f4;
+    color: white;
+    width: 355px;
+    height: 520px;
+}
+#exer-two article{
+    
+}
+.north, .east, .south, .west {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 41px;
+}
+.north{
+    background-color: #e67676;
+}
+.east{
+    background-color: #f2f062;
+}
+
+.south{
+    background-color: #a9e6e6;
+}
+.west{
+    background-color: #7692e4;
+}
