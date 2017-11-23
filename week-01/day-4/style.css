@@ -194,7 +194,7 @@ p.asteroid{
 
 #exer-nine {
     width: 25%;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #exer-nine p, #exer-nine h1 {
@@ -204,13 +204,12 @@ p.asteroid{
 }
 
 #exer-nine h1 {
-    font-size: 18px;
+    font-size: 1.5em;
 }
 
 #exer-nine p {
     border: 3px solid #000;
     border-top: none;
-    border-collapse: collapse;
     padding: 15px;
 }
 #exer-nine p:last-child {
@@ -220,3 +219,43 @@ p.asteroid{
 #exer-nine p:hover {
     background-color: #e67676;
 }
+
+/* Exercise 10 */
+
+#exer-ten {
+    font-size: 16px;
+    width: 250px;
+    font-family: courier, sans-serif;
+    margin: 1%;
+}
+
+#exer-ten p {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    color: white;
+    padding: 20px;
+    background-image: url(duck.png);
+}
+
+#exer-ten p:first-child {
+    background-color: #ff6347;
+    background-position: left;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+#exer-ten p:nth-child(2n) {
+    background-color: #643579;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+#exer-ten p:last-child {
+    background-color: #808080;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+
