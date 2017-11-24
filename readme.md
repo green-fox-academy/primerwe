@@ -7,3 +7,5 @@
 [badcat-cohort](https://github.com/greenfox-academy/badcat-syllabus)
 
 [my first-ish website](https://github.com/primerwe/primerwe.github.io)
+
+[First week at Green Fox ;)](https://github.com/greenfox-academy/primerwe/tree/master/week-01)
