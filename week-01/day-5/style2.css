@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #4A4261;
+}
+
+main {
+    display: block;
+    margin: auto;
+    background-color: #dcd6cd;
+    width: 70%;
+}
+
+.row {
+    margin: 0;
+}
+
+h1 {
+    color: #938C97;
+    font-size: 2em;
+    margin-top: 0;
+    padding: 15px;
+}
+
+h2 {
+    color: #fff;
+    background: #938C97;
+    font-size: 1.2em;
+}
+#personal h2{
+    padding: 10px;
+}
+p {
+    color: #938c97;
+}
+.req {
+    color: #ff1200;
+    font-size: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #938c97;
+}
+
+a{
+    text-decoration: underline;
+    color: #4a4261;
+}
+
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 5px 10px;
+}
+input[type=number]{
+    width: 60%;
+}
+input[type=submit] {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background-color: #4A4261;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    display: block;
+    margin: auto;
+    width: 35%;
+    padding: 9px 18px;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #4A4261;
+    font-size: 0.8em;
+    border: 1px solid #4a4261;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    margin: 9px 18px;
+}
+
+#intro, #some-more{
+    margin: 15px;
+}
+
+button{
+    padding: 9px 18px;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #4A4261;
+    font-size: 0.8em;
+    border: 1px solid #4a4261;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
