@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-01/Day-5/Form.v2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Profil</h1>
+        <section id="personal">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2>Személyes adatok</h2>
+                    <form action="" method="post">
+                        <div>
+                            <label for="name">Név<span class="req"> *</span></label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <label for="bdate">Születési éved</label>
+                                <input type="number" name="bdate" id="bdate" placeholder="pl. 1984">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <label for="gender">Nemed</label>
+                                <input type="radio" name="gender" value="nő">nő
+                                <input type="radio" name="gender" value="férfi">férfi
+                            </div>
+                        </div>
+                        <label>Milyen márkákat szeretsz?</label>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="checkbox" name="brands1" value="Adidas">Adidas<br>
+                                <input type="checkbox" name="brands2" value="Apple">Apple<br>
+                                <input type="checkbox" name="brands3" value="Audi">Audi<br>
+                                <input type="checkbox" name="brands4" value="Coca-Cola">Coca-Cola<br>
+                                <input type="checkbox" name="brands5" value="Nike">Nike<br>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="checkbox" name="brands6" value="Opel">Opel<br>
+                                <input type="checkbox" name="brands7" value="Ray-Ban">Ray-Ban<br>
+                                <input type="checkbox" name="brands8" value="Starbucks">Starbucks<br>
+                                <input type="checkbox" name="brands9" value="Tesla">Tesla<br>
+                                <input type="checkbox" name="brands10" value="Yahoo">Yahoo<br>
+                            </div>
+                        </div>
+                        <p>Többet is választhatsz!</p>
+                    </form>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2>Kapcsolat</h2>
+                    <form action="" method="post">
+                        <div>
+                            <label>Telefonszám<span class="req"> *</span></label>
+                            <input type="text" name="tel" id="tel" required placeholder="+36 -- --- ----">
+                        </div>
+                        <div>
+                            <label>E-mail cím<span class="req"> *</span></label>
+                            <input type="email" name="email" id="email" required placeholder="nev@domain.hu" maxlength="100">
+                        </div>
+                        <div>
+                            <label>Facebook profilod</label>
+                            <input type="text" name="facebook" id="facebook" placeholder="http://facebook.com/...">
+                        </div>
+                        <div>
+                            <label>Twitter profilod</label>
+                            <input type="text" name="twitter" id="twitter" placeholder="http://twitter.com/...">
+                        </div>
+                        <div>
+                            <label>Milyen házban laksz?</label>
+                            <select name="house" id="house">
+                                <option value="Kertesház">Kertesház</option>
+                                <option value="Emeletesház">Emeletesház</option>
+                                <option value="Társasház">Társasház</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--            <div class="clear"></div>-->
+        <section id="intro">
+            <div>
+                <label>Bemutatkozás<span class="req"> *</span></label>
+                <textarea name="intro" id="intro" cols="97" rows="5"></textarea>
+            </div>
+        </section>
+        <section id="some-more">
+            <form action="" method="post">
+                <div>
+                    <label>CV feltöltése</label>
+                    <button>File kiválasztása</button>
+                </div>
+                <div>
+                    <input type="checkbox" name="accept" value="Elfogadom a felhasználási feltételeket">Elfogadom a <a href="#">felhasználási feltételeket</a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="submit" name="submit" value="Mentés">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="reset" name="reset" value="Űrlap törlése">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
