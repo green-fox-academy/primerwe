@@ -2,10 +2,7 @@ a = 24
 out = 0
 # if w is even increment out by one
 
-if a % 2 == 0
 print(out)
-
-
 
 
 b = 13
