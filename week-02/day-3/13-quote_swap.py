@@ -12,7 +12,3 @@ a, b = words.index("do"), words.index("cannot")
 words[b], words[a] = words[a], words[b]
 
 print(" ".join(words))
-
-
-
-
