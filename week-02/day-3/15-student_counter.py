@@ -17,7 +17,7 @@ def num_candies(students):
     candy = 0
     for i in range(len(students)):
         candy += students[i]['candies']
-    print(candy)
+    return candy
 
 print(num_candies(students))
 
@@ -26,6 +26,6 @@ def num_ages(students):
     for i in range(len(students)):
         if students[i]['candies'] < 5:
             ages += students[i]['age']
-    print(ages)
+    return ages
 
 print(num_ages(students))

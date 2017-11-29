@@ -16,7 +16,7 @@ def list_of_students(students):
     for i in range(len(students)):
         if students[i]['candies'] > 4: 
             listOf += students[i]['name']
-    print(listOf)
+    return listOf
 
 print(list_of_students(students))
 
@@ -24,6 +24,6 @@ def average_candy(students):
     averageCandy = 0
     for i in range(len(students)):
         averageCandy += students[i]['candies']
-    print(averageCandy / (len(students)))
+    return (averageCandy / (len(students)))
 
 print(average_candy(students))
