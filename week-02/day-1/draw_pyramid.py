@@ -13,9 +13,6 @@ number = int(input("Choose a number: "))
 char = "*"
 
 for i in range(number):
-    if number > 0:
-        print((number - 1) * ' ' + char * (i * 2 + 1))
-        i += 1
-        number -= 1
-    else:
-        print("Choose a bigger number!")
+    print((number - 1) * ' ' + char * (i * 2 + 1))
+    i += 1
+    number -= 1
