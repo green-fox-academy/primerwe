@@ -1,6 +1,10 @@
+#1. convert the two strings to a list
+#2. sort the list
+#3. match each item from list1 to list2
+#4. if all items from list1 has a 'pair' from list2 => the two words are anagrams 
+
 str1 = str(input("Enter the first word: "))
 str2 = str(input("Enter the second word: "))
-
 
 def is_anagram(str1,str2):
     list1 = list(str1)
