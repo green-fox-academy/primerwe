@@ -25,4 +25,4 @@ def find_str(inputs, char):
 
     return -1
 
-print(find_str("this is what I'm searching in", "searching"))
+print(find_str(inputs, char))
