@@ -17,4 +17,3 @@ def printer_sum(*args):
     print(total)
     
 printer_sum(1, 2, 3, 5)
-
