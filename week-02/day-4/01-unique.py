@@ -9,8 +9,11 @@
 
 inputs = [1, 11, 34, 11, 52, 61, 1, 34]
 
-output = []
-for x in inputs:
-    if x not in output:
-        output.append(x)
-print(output)
+def input_numbers(inputs):
+    output = []
+    for x in inputs:
+        if x not in output:
+            output.append(x)
+    return(output)
+
+print(input_numbers(inputs))
