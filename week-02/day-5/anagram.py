@@ -4,8 +4,8 @@
 #4. if all items from list1 has a 'pair' from list2 => the two words are anagrams 
 # space-eket nem tudja összehasonlítani + kis- és nagybetű!!!
 
-str1 = str(input("Enter the first word: "))
-str2 = str(input("Enter the second word: "))
+str1 = str.lower((input("Enter the first word: ")))
+str2 = str.lower((input("Enter the second word: ")))
 
 def is_anagram(str1,str2):
     list1 = list(str1)
