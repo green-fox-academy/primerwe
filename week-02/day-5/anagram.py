@@ -2,6 +2,7 @@
 #2. sort the list
 #3. match each item from list1 to list2
 #4. if all items from list1 has a 'pair' from list2 => the two words are anagrams 
+# space-eket nem tudja összehasonlítani + kis- és nagybetű!!!
 
 str1 = str(input("Enter the first word: "))
 str2 = str(input("Enter the second word: "))

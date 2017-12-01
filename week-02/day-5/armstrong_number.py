@@ -4,21 +4,22 @@
 #For a 3-digit number: 153 is a 3-digit number, raise each digit to the third power, and add: 1^3 + 5^3 + 3^3 = 153, so it is an Armstrong number.
 #E.g. if we type 371, the program should print out: The 371 is an Armstrong number.
 
-#helyiértékek alapján szétbontani a számot és a megfelelő kitevőre emelni a számjegyeket majd összeadni az így kapott összegeket
-
-num = int(input("Enter a number: "))
+num = (input("Enter a number: "))
 
 def armstrong_number(num):
-    output = 0
-    temp = num
-    while temp > 0:
-        digit = temp % 10
-        output += digit ** len(str(num))
-        temp //= 10
+    #raise each digit to the nth power
+    power_l = [ int(x) ** (len(num)) for x in num ]
     
-    if output == num:
+    #add them up
+    output = 0
+    for p in power_l:
+        output += p
+    
+    # check if the output is equal with the number
+    if int(output) == int(num):
         return('The ' + str(num) + ' is an Armstrong number.')
     else:
         return('The ' + str(num) + ' is not an Armstrong number.')
 
 print(armstrong_number(num))
+    
