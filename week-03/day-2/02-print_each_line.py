@@ -6,8 +6,8 @@
 file_name = input("Enter a filename: ")
 
 try:
-    my_file = open(file_name, "r")
-    for x in my_file:
+    read_file = open(file_name, "r")
+    for x in read_file:
         print(x, end=' ')
 except FileNotFoundError:
     print("Unable to read file: ", file_name)

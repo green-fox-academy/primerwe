@@ -13,5 +13,6 @@ except Exception:
     print("Unable to write file: ", file_name)
 
 my_file = open(file_name)
-s = my_file.read()
-print(s)
+sample = my_file.read()
+my_file.close()
+print(sample)
