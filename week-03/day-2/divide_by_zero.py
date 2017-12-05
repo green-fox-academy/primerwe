@@ -6,10 +6,10 @@
 divisor = int(input("Enter a number: "))
 
 def divide():
-        try:
-            result = 10 / divisor
-            return(result)
-        except ZeroDivisionError:
-            return("Fail")
+    try:
+        result = 10 / divisor
+        return(result)
+    except ZeroDivisionError:
+        return("Fail")
             
 print(divide())
