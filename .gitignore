@@ -1,7 +1,10 @@
-#workshop-toolchain
+#green fox
 .gf.json
 *.txt
 *.csv
+__pycache__
+*.pyo
+*.pyc
 
 # Compiled source #
 ###################
@@ -43,10 +46,8 @@ Thumbs.db
 desktop.ini
 
 #some addition file
-*.pyo
-*.pyc
-*~
 *.bak
 .orig
 *.swp
 .idea/
+*~
