@@ -14,7 +14,8 @@ size = 0
 def draw_squares(size):
     for i in range(3):
         size = random.randrange(1,151)
-        squares = canvas.create_rectangle((x-size/2), (y-size/2), (x+size/2), (y+size/2), fill='#b4dc47')
+        rand_color = ('#%06X' % random.randint(0,256**3-1))
+        squares = canvas.create_rectangle((x-size/2), (y-size/2), (x+size/2), (y+size/2), fill=rand_color)
 
 root = Tk()
 
