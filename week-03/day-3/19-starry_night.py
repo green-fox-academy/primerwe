@@ -10,11 +10,11 @@ import random
 x=0
 y=0
 def draw_the_night_sky(x,y):
-    for i in range(1,101):
+    for i in range(70):
         x = random.randrange(0,251)
         y = random.randrange(0,251)
         rand_grey = ('grey' + str(random.randrange(50,100)))
-        stars = canvas.create_rectangle(x, y, x+10, y+10, fill=rand_grey)
+        stars = canvas.create_rectangle(x, y, x+random.randint(1,5), y+random.randint(1,5), fill=rand_grey)
 
 root = Tk()
 
