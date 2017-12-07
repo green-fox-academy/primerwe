@@ -2,12 +2,14 @@
 # [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
 from tkinter import *
 
-x = 10
-y = 10
-
 def draw_steps():
-    for i in range(19):
-        steps = canvas.create_rectangle(x*(i+1), y*(i+1), (x*(i+1))+x, (y*(i+1))+y, fill='#b145f4')
+    x = 10
+    y = 10
+    size = 10
+    for _ in range(19):
+        steps = canvas.create_rectangle(x, y, x+size, y+size, fill='#b145f4')
+        x += size
+        y += size
 
 root = Tk()
 
