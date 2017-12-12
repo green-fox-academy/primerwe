@@ -1,20 +1,25 @@
 class Garden(object):
-    def __init__(self, flowers = [], trees = []):
-        self.flowers = flowers
-        self.trees = trees
+    def __init__(self, plants = []):
+        self.plants = plants
         
-    def add_flower(self, flower):
-        if flower not in self.flowers:
-            self.flowers.append(flower)
+    def add_plant(self, plant):
+        if plant not in self.plants:
+            self.plants.append(plant)
     
-    def add_tree(self, tree):
-        if tree not in self.trees:
-            self.trees.append(tree)
+    def watering(self, water):
+        counter = 0
+        for i in self.plants:
+            if i.plant_type == 'Flower' and i.water_amount < 5 or i.plant_type == 'Tree' and i.water_amount < 10:
+                counter += 1
+        water = water / counter
+        for i in self.plants:
+            if i.plant_type == 'Flower' and i.water_amount < 5:
+                i.water_amount += water * 0.75
+            if i.plant_type == 'Tree' and i.water_amount < 10:
+                i.water_amount += water * 0.4
+        print("Watering with " + str(int(water * counter)))
 
-    
-        
-
-class Flower(Garden):
+class Flower():
     def __init__(self, color, plant_type = 'Flower', water_amount = 0):
         self.color = color
         self.plant_type = plant_type
@@ -27,7 +32,7 @@ class Flower(Garden):
             print("The " + format(self.color) + " " + format(self.plant_type) + " doesnt needs water")
 
 
-class Tree(Garden):
+class Tree():
     def __init__(self, color, plant_type = 'Tree', water_amount = 0):
         self.color = color
         self.plant_type = plant_type
@@ -45,6 +50,24 @@ blue = Flower('blue')
 purple = Tree('purple')
 orange = Tree('orange')
 
+yellow.status()
+blue.status()
+purple.status()
+orange.status()
+
+garden = Garden()
+garden.add_plant(yellow)
+garden.add_plant(blue)
+garden.add_plant(purple)
+garden.add_plant(orange)
+
+garden.watering(40)
+yellow.status()
+blue.status()
+purple.status()
+orange.status()
+
+garden.watering(70)
 yellow.status()
 blue.status()
 purple.status()
