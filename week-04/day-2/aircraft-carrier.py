@@ -1,5 +1,5 @@
 class Aircraft():
-    def __init__(self, aircraft_type, ammo = 0, max_ammo = 0, base_damage = 0)
+    def __init__(self, aircraft_type, ammo = 0, max_ammo = 0, base_damage = 0):
         self.aircraft_type = aircraft_type
         self.ammo = ammo
         self.max_ammo = max_ammo
@@ -95,5 +95,33 @@ class AircraftCarrier(object):
         print("Aircrafts:")
         for i in range(len(self.aircrafts)):
             print("Type " + format(self.aircrafts[i].aircraft_type) + ", Ammo: " + format(self.aircrafts[i].ammo) + ", Base Damage: " + format(self.aircrafts[i].base_damage) + ", All damage: " + format(self.aircrafts[i].base_damage * self.aircrafts[i].ammo))
-        
-        
+
+
+aircraft1 = Aircraft("F16")
+aircraft2 = Aircraft("F16")
+aircraft3 = Aircraft("F35")
+aircraft4 = Aircraft("F35")
+aircraft5 = Aircraft("F35")
+aircraft6 = Aircraft("F16")
+aircraft7 = Aircraft("F35")
+aircraft8 = Aircraft("F16")
+
+carrier1 = AircraftCarrier([], 50, 1000)
+carrier1.add_aircraft(aircraft1)
+carrier1.add_aircraft(aircraft3)
+carrier1.add_aircraft(aircraft5)
+carrier1.add_aircraft(aircraft7)
+
+carrier1.fill()
+carrier1.get_status()
+
+carrier2 = AircraftCarrier([], 100, 1000)
+carrier2.add_aircraft(aircraft2)
+carrier2.add_aircraft(aircraft4)
+carrier2.add_aircraft(aircraft6)
+carrier2.add_aircraft(aircraft8)
+
+carrier2.fill()
+carrier2.get_status()
+
+carrier1.fight(carrier2)        
