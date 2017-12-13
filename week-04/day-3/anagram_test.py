@@ -17,5 +17,8 @@ class AnagramTest(unittest.TestCase):
     def test_for_not_anagram(self):
         self.assertEqual(is_anagram('ann', 'annn'), False)
     
+    def test_for_empty_string(self):
+        self.assertEqual(is_anagram('', ' '), True)
+    
 if __name__ == '__main__':
     unittest.main()
