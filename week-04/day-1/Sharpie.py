@@ -7,13 +7,22 @@ class Sharpie(object):
     def use(self):
         self.ink_amount -= 10
         return self.ink_amount
+    
+    def print_status(self):
+        print("Color: " + format(self.color) + ", width: " + format(self.width) + ", ink amount: " + format(self.ink_amount))
+
 
 red = Sharpie("red", 1.25)
 green = Sharpie("#b4dc47", 0.7)
-blue = Sharpie("#0000ff", 1.0)
+blue = Sharpie("#00f", 1.0)
+black = Sharpie("#000", 2.5, 0)
 
-print("Color: " + red.color + ", width: " + str(red.width) + ", ink amount: " + str(red.ink_amount))
+list_of_sharpies = [red, green, blue, black]
+
+for i in range(len(list_of_sharpies)):
+    list_of_sharpies[i].print_status()
 
 red.use()
 
-print("Color: " + red.color + ", width: " + str(red.width) + ", ink amount: " + str(red.ink_amount))
+for i in range(len(list_of_sharpies)):
+    list_of_sharpies[i].print_status()
