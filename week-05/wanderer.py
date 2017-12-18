@@ -15,6 +15,7 @@ class Board(object):
         self.canvas = canvas 
         self.floor_img = PhotoImage(file='elements/floor.png')
         self.wall_img = PhotoImage(file='elements/wall.png')
+        self.tile = 70
         self.area = Area()
         self.draw_map(self.area.tiles)
         
@@ -25,7 +26,7 @@ class Board(object):
                     image = self.floor_img
                 else:
                     image = self.wall_img
-                canvas.create_image(j * 70, i * 70, anchor=NW, image=image)
+                canvas.create_image(j * self.tile, i * self.tile, anchor=NW, image=image)
 
 
 class Characters(object):
@@ -61,6 +62,26 @@ class Hero(Characters):
                 self.canvas.delete(self.character_delete)
                 self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
 
+                
+                
+class Monster(Characters):
+    
+    def __init__(self, canvas):
+        super().__init__(canvas)
+        self.skeleton = PhotoImage(file='elements/skeleton.png')
+        
+        self.draw_character(self.x, self.y, self.skeleton)    
+        
+    def draw_character(self, x, y, character_img):
+        if 0 <= x <= 9 and 0 <= y <= 9:
+            if board.area.tiles[y][x] == 0:
+                self.x = x
+                self.y = y
+                self.canvas.delete(self.character_delete)
+                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+        
+        
+
 def on_key_press(e):
     #pass
     if (e.keysym == "Up"):
@@ -77,7 +98,8 @@ board = Board(canvas)
 hero = Hero(canvas)
 board.draw_map
 hero.draw_character
-
+enemy1 = Monster(canvas)
+enemy1.draw_character
 
 root.bind("<KeyPress>", on_key_press)
 canvas.pack()
