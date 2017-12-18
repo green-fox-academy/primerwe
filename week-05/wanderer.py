@@ -35,9 +35,9 @@ class Characters(object):
         self.character_del = 0
         self.tile = 70
     
-    def draw_character(self, x, y, character_img):
+    def draw_character(self, pos_x, pos_y, character_img):
         self.canvas.delete(self.character_del)
-        self.character_del = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+        self.character_del = canvas.create_image(pos_x*self.tile, pos_y*self.tile, anchor=NW, image=character_img)
         
 
 class Hero(Characters):
