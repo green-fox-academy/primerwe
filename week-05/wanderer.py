@@ -50,12 +50,26 @@ class Hero(Characters):
         self.hero_right_img = PhotoImage(file='elements/hero-right.png')
 
         self.draw_character(self.pos_x, self.pos_y, self.hero_down_img)
+
         
-    
+def on_key_press(e):
+    if e.keysym == "Up":
+        hero.draw_character(hero.pos_x, hero.pos_y - 1, hero.hero_up_img)
+    elif e.keysym == "Down":
+        hero.draw_character(hero.pos_x, hero.pos_y + 1, hero.hero_down_img)
+    elif e.keysym == "Left":
+        hero.draw_character(hero.pos_x - 1, hero.pos_y, hero.hero_left_img)
+    elif e.keysym == "Right":
+        hero.draw_character(hero.pos_x + 1, hero.pos_y, hero.hero_right_img)
+
+
         
 
-myboard = Board()
-myhero = Hero(canvas)
-print(myboard)
-print(myhero)
+board = Board()
+hero = Hero(canvas)
+board.draw_map
+hero.draw_character
+
+root.bind("<KeyPress>", on_key_press)
+canvas.pack()
 root.mainloop()
