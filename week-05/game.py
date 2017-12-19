@@ -39,10 +39,10 @@ class Game(object):
         elif (e.keysym == "Left"):
             self.hero.update_image(self.hero.hero_left)
             if self.board.is_wall(self.hero.x - self.board.tile_size, self.hero.y ) == False:
-                self.hero.move(+ self.board.tile_size, 0)
+                self.hero.move(- self.board.tile_size, 0)
         elif (e.keysym == "Right"):
             self.hero.update_image(self.hero.hero_right)
             if self.board.is_wall(self.hero.x + self.board.tile_size, self.hero.y ) == False:
-                self.hero.move(- self.board.tile_size, 0)
+                self.hero.move(+ self.board.tile_size, 0)
             
 game = Game()
