@@ -40,8 +40,12 @@ class Characters(object):
         self.character_delete = 0
     
     def draw_character(self, x, y, character_img):
-        self.canvas.delete(self.character_delete)
-        self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+        if 0 <= x <= 9 and 0 <= y <= 9:
+            if board.area.tiles[y][x] == 0:
+                self.x = x
+                self.y = y
+                self.canvas.delete(self.character_delete)
+                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
     
     
 class Hero(Characters):
@@ -55,13 +59,13 @@ class Hero(Characters):
         
         self.draw_character(self.x, self.y, self.hero_down)
         
-    def draw_character(self, x, y, character_img):
-        if 0 <= x <= 9 and 0 <= y <= 9:
-            if board.area.tiles[y][x] == 0:
-                self.x = x
-                self.y = y
-                self.canvas.delete(self.character_delete)
-                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+#    def draw_character(self, x, y, character_img):
+#        if 0 <= x <= 9 and 0 <= y <= 9:
+#            if board.area.tiles[y][x] == 0:
+#                self.x = x
+#                self.y = y
+#                self.canvas.delete(self.character_delete)
+#                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
 
                    
 class Monster(Characters):
@@ -74,13 +78,13 @@ class Monster(Characters):
         
         self.draw_character(self.x, self.y, self.skeleton)        
         
-    def draw_character(self, x, y, character_img):
-        if 0 <= x <= 9 and 0 <= y <= 9:
-            if board.area.tiles[y][x] == 0:
-                self.x = x
-                self.y = y
-                self.canvas.delete(self.character_delete)
-                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+#    def draw_character(self, x, y, character_img):
+#        if 0 <= x <= 9 and 0 <= y <= 9:
+#            if board.area.tiles[y][x] == 0:
+#                self.x = x
+#                self.y = y
+#                self.canvas.delete(self.character_delete)
+#                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
         
 
 class Boss(Characters):
@@ -92,13 +96,13 @@ class Boss(Characters):
         
         self.draw_character(self.x, self.y, self.boss)        
         
-    def draw_character(self, x, y, character_img):
-        if 0 <= x <= 9 and 0 <= y <= 9:
-            if board.area.tiles[y][x] == 0:
-                self.x = x
-                self.y = y
-                self.canvas.delete(self.character_delete)
-                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+#    def draw_character(self, x, y, character_img):
+#        if 0 <= x <= 9 and 0 <= y <= 9:
+#            if board.area.tiles[y][x] == 0:
+#                self.x = x
+#                self.y = y
+#                self.canvas.delete(self.character_delete)
+#                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
     
     
 def on_key_press(e):
