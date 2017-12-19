@@ -6,7 +6,7 @@ class Board(object):
     def __init__(self):
         self.floor = PhotoImage(file='elements/floor.png')
         self.wall = PhotoImage(file='elements/wall.png')
-        self.tile_size = 70
+        self.tile_size = 65
         self.x = 0
         self.y = 0
         self.tiles = [
@@ -44,8 +44,8 @@ class Board(object):
             return True
         
     def get_cell(self, x, y):
-        x = int(x/70)
-        y = int(y/70)
+        x = int(x/65)
+        y = int(y/65)
         return self.tiles[y][x]
     
     def get_random_coordinates(self, monster_num):
@@ -56,3 +56,13 @@ class Board(object):
             if self.tiles[y][x] == 0 and [x, y] not in coordinates and [x, y] != [0, 0]:
                 coordinates.append([x * self.tile_size, y * self.tile_size])
         return coordinates
+
+
+class Hud(object):
+    
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+        
+    def draw_hud(self, canvas, x, y):
+        canvas.create_text(x, y, font=(16), anchor=NW, text=" Hero " + " (Level 1) " + " HP: 8/10 " + " | " + " DP: 8 " + " | " + " SP: 6")
