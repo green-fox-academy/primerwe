@@ -21,7 +21,7 @@ class Game(object):
         self.monster.draw_skeleton(self.coordinates[:-1])
         self.boss.draw_boss(self.coordinates[-1])
         self.hud = Hud()
-        self.hud.draw_hud(canvas, 0, 680)
+        self.hud.draw_hud(canvas, 0, 660)
         root.bind("<KeyPress>", self.on_key_press)
         canvas.pack()
         #canvas.focus_set()
