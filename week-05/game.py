@@ -1,6 +1,6 @@
 from tkinter import *
 import random
-from board import Board
+from board import Board, Hud
 from character import Hero, Monster, Boss
 
 
@@ -20,6 +20,8 @@ class Game(object):
         self.coordinates = self.board.get_random_coordinates(self.monster_num + 1)
         self.monster.draw_skeleton(self.coordinates[:-1])
         self.boss.draw_boss(self.coordinates[-1])
+        self.hud = Hud()
+        self.hud.draw_hud(canvas, 0, 680)
         root.bind("<KeyPress>", self.on_key_press)
         canvas.pack()
         #canvas.focus_set()
