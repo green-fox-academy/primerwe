@@ -1,5 +1,6 @@
 from tkinter import *
 from board import Area
+import random
 
 size = 700
 
@@ -62,15 +63,16 @@ class Hero(Characters):
                 self.canvas.delete(self.character_delete)
                 self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
 
-                
-                
+                   
 class Monster(Characters):
     
     def __init__(self, canvas):
         super().__init__(canvas)
         self.skeleton = PhotoImage(file='elements/skeleton.png')
+        self.x = random.randint(1,9)
+        self.y = random.randint(1,9)
         
-        self.draw_character(self.x, self.y, self.skeleton)    
+        self.draw_character(self.x, self.y, self.skeleton)        
         
     def draw_character(self, x, y, character_img):
         if 0 <= x <= 9 and 0 <= y <= 9:
@@ -80,10 +82,27 @@ class Monster(Characters):
                 self.canvas.delete(self.character_delete)
                 self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
         
-        
 
+class Boss(Characters):
+    def __init__(self, canvas):
+        super().__init__(canvas)
+        self.boss = PhotoImage(file='elements/boss.png')
+        self.x = random.randint(1,9)
+        self.y = random.randint(1,9)
+        
+        self.draw_character(self.x, self.y, self.boss)        
+        
+    def draw_character(self, x, y, character_img):
+        if 0 <= x <= 9 and 0 <= y <= 9:
+            if board.area.tiles[y][x] == 0:
+                self.x = x
+                self.y = y
+                self.canvas.delete(self.character_delete)
+                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
+    
+    
 def on_key_press(e):
-    #pass
+    
     if (e.keysym == "Up"):
         hero.draw_character(hero.x, hero.y - 1, hero.hero_up)
     elif (e.keysym == "Down"):
@@ -96,10 +115,11 @@ def on_key_press(e):
 
 board = Board(canvas)
 hero = Hero(canvas)
-board.draw_map
-hero.draw_character
 enemy1 = Monster(canvas)
-enemy1.draw_character
+enemy2 = Monster(canvas)
+enemy3 = Monster(canvas)
+boss = Boss(canvas)
+
 
 root.bind("<KeyPress>", on_key_press)
 canvas.pack()
