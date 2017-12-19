@@ -1,11 +1,12 @@
 from tkinter import *
+import random
 
 class Board(object):
     #wall == 1, floor == 0
     def __init__(self):
         self.floor = PhotoImage(file='elements/floor.png')
         self.wall = PhotoImage(file='elements/wall.png')
-        self.tile = 70
+        self.tile_size = 70
         self.x = 0
         self.y = 0
         self.tiles = [
@@ -21,21 +22,37 @@ class Board(object):
             [0, 1, 0, 0, 1, 1, 0, 0, 0, 1]
         ]
 
-        def draw_map(self, canvas):
+    def draw_board(self, canvas):
         for row in range(len(self.tiles)):
-            for col in range(len(self.tiles[i])):
+            for col in range(len(self.tiles[0])):
                 if self.tiles[row][col] == 0:
-                    image = self.floor
+                    canvas.create_image(self.x, self.y, anchor=NW, image=self.floor)
+                    self.x += self.tile_size
                 else:
-                    image = self.wall
-                canvas.create_image(col * self.tile, row * self.tile, anchor=NW, image=image)
+                    canvas.create_image(self.x, self.y, anchor=NW, image=self.wall)
+                    self.x += self.tile_size
+            self.x = 0
+            self.y += self.tile_size
+
+
+    def is_wall(self, x, y):
+        cell_x = x//self.tile_size
+        cell_y = y//self.tile_size
+        if cell_x >= 0 and cell_x < len(self.tiles[0]) and cell_y >= 0 and cell_y < (len(self.tiles)):
+            return self.tiles[cell_y][cell_x] == 1
+        else:
+            return True
         
-        
-        
-#    def is_wall(self, x, y):
-#        self.tiles[y][x] == 1
-#    
-    def is_floor(self, x, y):
-        self.tiles[y][x] == 0
-#    
-#feature: generáljon 10db 0/1 random számot a listába 10szer és úgy rajzolja a térképet
+    def get_cell(self, x, y):
+        x = int(x/70)
+        y = int(y/70)
+        return self.tiles[y][x]
+    
+    def get_random_coordinates(self, monster_num):
+        coordinates = []
+        while len(coordinates) != monster_num:
+            x = random.randint(0,len(self.tiles[0]) - 1)
+            y = random.randint(0,len(self.tiles) - 1)
+            if self.tiles[y][x] == 0 and [x, y] not in coordinates and [x, y] != [0, 0]:
+                coordinates.append([x * self.tile_size, y * self.tile_size])
+        return coordinates
