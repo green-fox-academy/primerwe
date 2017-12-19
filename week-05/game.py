@@ -1,41 +1,48 @@
 from tkinter import *
-from board import Area
 import random
+from board import Board
+from character import Hero, Monster, Boss
 
-size = 700
 
-root = Tk()
-root.configure(background ='black')
-canvas = Canvas(root, width=size, height=size, bd=0)
-canvas.pack()
-
+class Game(object):
     
-    
-    
-def on_key_press(e):
-    
-    if (e.keysym == "Up"):
-        hero.draw_character(hero.x, hero.y - 1, hero.hero_up)
-    elif (e.keysym == "Down"):
-        hero.draw_character(hero.x, hero.y + 1, hero.hero_down)
-    elif (e.keysym == "Left"):
-        hero.draw_character(hero.x - 1, hero.y, hero.hero_left)
-    elif (e.keysym == "Right"):
-        hero.draw_character(hero.x + 1, hero.y, hero.hero_right)
+    def __init__(self):
+        root = Tk()
+        canvas = Canvas(root, width=700, height=700, bd=0)
+        self.board = Board()
+        self.board.draw_board(canvas)
+        self.hero = Hero(canvas)
+        self.hero.draw_hero(0,0)
+        self.hero.update_image(self.hero.hero_down)
+        self.boss = Boss(canvas)
+        self.monster = Monster(canvas)
+        self.monster_num = 3
+        self.coordinates = self.board.get_random_coordinates(self.monster_num + 1)
+        self.monster.draw_skeleton(self.coordinates[:-1])
+        self.boss.draw_boss(self.coordinates[-1])
+        root.bind("<KeyPress>", self.on_key_press)
+        canvas.pack()
+        #canvas.focus_set()
+        root.mainloop()
 
 
-board = Board(canvas)
-hero = Hero(canvas)
-characters = Characters(canvas)
-enemy1 = Monster(canvas)
-enemy2 = Monster(canvas)
-enemy3 = Monster(canvas)
-boss = Boss(canvas)
+    def on_key_press(self, e):
 
-
-root.bind("<KeyPress>", on_key_press)
-canvas.pack()
-
-canvas.focus_set()
-
-root.mainloop()
+        if (e.keysym == "Up"):
+            self.hero.update_image(self.hero.hero_up)
+            if self.board.is_wall(self.hero.x, self.hero.y - self.board.tile_size) == False:
+                self.hero.move(0,- self.board.tile_size)
+        elif (e.keysym == "Down"):
+            self.hero.update_image(self.hero.hero_down)
+            if self.board.is_wall(self.hero.x, self.hero.y + self.board.tile_size) == False:
+                self.hero.move(0,+ self.board.tile_size)
+        elif (e.keysym == "Left"):
+            self.hero.update_image(self.hero.hero_left)
+            if self.board.is_wall(self.hero.x - self.board.tile_size, self.hero.y ) == False:
+                self.hero.move(+ self.board.tile_size, 0)
+        elif (e.keysym == "Right"):
+            self.hero.update_image(self.hero.hero_right)
+            if self.board.is_wall(self.hero.x + self.board.tile_size, self.hero.y ) == False:
+                self.hero.move(- self.board.tile_size, 0)
+            
+game = Game()
