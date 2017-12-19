@@ -6,16 +6,6 @@ class Characters(object):
     
     def __init__(self, canvas):
         self.canvas = canvas
-#        self.tile = 70
-#        self.character_delete = 0
-#    
-#    def draw_character(self, x, y, character_img):
-#        if 0 <= x <= 9 and 0 <= y <= 9:
-#            if board.area.tiles[y][x] == 0:
-#                self.x = x
-#                self.y = y
-#                self.canvas.delete(self.character_delete)
-#                self.character_delete = canvas.create_image(x*self.tile, y*self.tile, anchor=NW, image=character_img)
 
     
 class Hero(Characters):
@@ -29,26 +19,38 @@ class Hero(Characters):
         self.hero_right = PhotoImage(file='elements/hero-right.png')
         self.canvas = canvas
         
-        def draw_hero(self, x, y):
-            self.hero = canvas.create_image(x, y, anchor=NW, image=self.hero_down)
+    def draw_hero(self, x, y):
+        self.hero = self.canvas.create_image(x, y, anchor=NW, image=self.hero_down)
 
+    def move(self, dx, dy):
+        self.canvas.move(self.hero, dx, dy)
+        self.x += dx
+        self.y += dy
+    
+    def update_image(self, img):
+        self.img = img
+        self.canvas.itemconfig(self.hero, image=self.img)
                    
 class Monster(Characters):
     
     def __init__(self, canvas):
-        super().__init__(canvas)
-        self.x = random.randint(1,9)
-        self.y = random.randint(1,9)
-        self.skeleton = PhotoImage(file='elements/skeleton.png')
+#        self.x = random.randint(1,9)
+#        self.y = random.randint(1,9)
+        self.skeleton_img = PhotoImage(file='elements/skeleton.png')
+        self.canvas = canvas
         
-        self.draw_character(self.x, self.y, self.skeleton)
+    def draw_skeleton(self, coordinates):
+        for i in range(len(coordinates)):
+            self.skeleton = self.canvas.create_image(coordinates[i][0], coordinates[i][1], anchor=NW, image=self.skeleton_img)
     
 
 class Boss(Characters):
+    
     def __init__(self, canvas):
-        super().__init__(canvas)
-        self.x = random.randint(1,9)
-        self.y = random.randint(1,9)
-        self.boss = PhotoImage(file='elements/boss.png')
+#        self.x = random.randint(1,9)
+#        self.y = random.randint(1,9)
+        self.boss_img = PhotoImage(file='elements/boss.png')
+        self.canvas = canvas
         
-        self.draw_character(self.x, self.y, self.boss)        
+    def draw_boss(self, coordinates):
+        self.boss = self.canvas.create_image(coordinates[0], coordinates[1], anchor=NW, image=self.boss_img)
