@@ -2,6 +2,7 @@ from tkinter import *
 import random
 from board import Board
 
+
 class Characters(object):
     
     def __init__(self, canvas):
@@ -30,7 +31,8 @@ class Hero(Characters):
     def update_image(self, img):
         self.img = img
         self.canvas.itemconfig(self.hero, image=self.img)
-                   
+
+
 class Monster(Characters):
     
     def __init__(self, canvas):
