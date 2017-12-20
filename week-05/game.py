@@ -76,7 +76,7 @@ class Game(object):
         if [self.hero.x, self.hero.y] in self.coordinates and [self.hero.x, self.hero.y] not in self.deleted_enemies and self.enemy_stat_onscreen == False:
             self.hud.draw_enemy_stat(self.canvas, self.hud_x, self.hud_y, self.enemies[self.coordinates.index([self.hero.x, self.hero.y])])
             self.enemy_stat_onscreen = True
-            self.hero_can_move = False
+            #self.hero_can_move = False
         if [self.hero.x, self.hero.y] not in self.coordinates and self.enemy_stat_onscreen == True:
             self.hud.clear_enemy_stat(self.canvas)
             self.enemy_stat_onscreen = False
@@ -100,26 +100,25 @@ class Game(object):
         self.enemies.append(self.boss)
         
     def is_strike(self, attacker, defender):
-        strike = attacker.sp + 2 * attacker.dice() > defender.hp
-        print(strike)
-        return strike
+        var = attacker.sp + 2 * attacker.dice() #> defender.hp
+        print(var)
+        return var
     
     def strike(self, attacker, defender):
         print("Before first strike attacker.hp: ", attacker.hp, "defender.hp: ", defender.hp)
-        if self.is_strike(attacker, defender):
+        if self.is_strike(attacker, defender) > defender.hp:
             print("def hp", defender.hp)
             dice = attacker.dice()
             print("dice", dice)
             print("att sp: ", attacker.sp)
             print("def dp", defender.dp)
-            defender.hp -= (attacker.sp + 2 * dice) - defender.dp
+            defender.hp -= ((attacker.sp + 2 * dice) - defender.dp)
             print("after strike attacker.hp: ", attacker.hp, "defender.hp: ", defender.hp)
-
             
     def fight(self, fighter_one, fighter_two):
         while fighter_one.hp > 0 and fighter_two.hp > 0:
             self.strike(fighter_one, fighter_two)
-            if fighter_one > 0 and fighter_two > 0:
+            if fighter_one.hp > 0 and fighter_two.hp > 0:
                 fighter_one, fighter_two = fighter_two, fighter_one
         self.hud.update_hud()
         self.hud.update_enemy_stat()
