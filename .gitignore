@@ -1,6 +1,7 @@
-#green fox
+# green fox #
+#############
 .gf.json
-*.txt
+#*.txt
 *.csv
 __pycache__
 *.pyo
