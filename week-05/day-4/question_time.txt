@@ -1,0 +1,11 @@
+Question time! (~10 mins) [4p]
+What is the difference between a function and a method? [2p]
+Your answer:
+
+both of them is piece of code that is called by name, but
+a function is more generic in relation to the overall program,
+method would be specific to an object
+
+What is the constructor? When it is used? [2p]
+Your answer:
+It is an initialization method that Python calls when you create a new instance of a class.
