@@ -16,6 +16,8 @@
 
 [4th week at Green Fox](https://github.com/greenfox-academy/primerwe/tree/master/week-04)
 
+[5th week at Green Fox](https://github.com/greenfox-academy/primerwe/tree/master/week-05)
+
 [The RPG](https://github.com/greenfox-academy/primerwe/tree/master/week-05)
 
 [ToDo-App](https://github.com/greenfox-academy/primerwe-todo-app)
