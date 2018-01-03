@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #ccc;
+}
+
+.container {
+    width: 100%;
+    max-width: 382px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+    flex-flow: column;
+    height: 621px;
+/*    align-items: center;*/
+}
+
+/*.item {
+    width: 382px;
+}*/
+
+.green {
+    background: #51D400;
+    flex-grow: 1;
+}
+
+.yellow {
+    background: #FFD62A;
+    flex-grow: 2;
+    order: 1;
+}
+
+.purple {
+    background: #B02AFF;
+    flex-grow: 1;
+}
