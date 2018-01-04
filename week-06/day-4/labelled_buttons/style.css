@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    font-family: sans-serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container a i{
+    padding-top: 10px; 
+}
+
+.fa {
+    background: #000;
+    color: #FFF;
+    width: 54px;
+    height: 54px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.delete {
+    background: #F00;
+    width: 100px;
+    height: 54px;
+    border: none;
+    font-size: 0.8em;
+    color: #EEE;
+    position: absolute;
+}
+
+.arrow_right {
+    position: absolute;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #000;
+}
