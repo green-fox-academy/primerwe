@@ -1,15 +1,14 @@
 * {
     margin: 0;
-    font-family: fantasy;
 }
 
 body {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -17,7 +16,10 @@ body {
 
 nav {
     background: #B02AFF;
-    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav ul::after {
@@ -26,29 +28,21 @@ nav ul::after {
     clear: both;
 }
 
-nav li,
-.social li {
+nav li {
     list-style-type: none;
-    margin: 10px;
+    margin: 15px;
     padding: 2%;
     background: #2AEAFF;
     float: left;
     width: 120px;
 }
 
-.social {
-    margin-right: 10px;
-}
-
-nav a,
-.social a {
+nav a {
     text-decoration: none;
     text-align: center;
     display: block;
     color: #B02AFF;
 }
-
-/* content base style */
 
 main {
     background: #fff;
@@ -58,67 +52,37 @@ main {
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
-    align-items: stretch;
 }
 
-section {
-    background: #FFD62A;
-    float: left;
-    flex: 1;
+#blocks {
+    display: flex;
+    margin: 10px;
+    justify-content: flex-start;
 }
 
-aside {
+#blocks div{
+    flex: 0 0 200px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.one, .two, .three, .four, .five {
     background: #51D400;
-    float: left;
-    flex: 0 1 300px;
-}
-
-article {
-    box-sizing: border-box;
-    padding: 0 20px 20px;
-}
-
-article h2 {
-    padding: 10px;
-}
-
-article p {
-    padding: 0 20px 20px;
-    text-align: justify;
-}
-
-aside > article {
-    padding: 0;
-}
-
-.greenfox {
-    width: 20%;
-    margin: 1% 2%;
-}
-
-.greenfoxx {
-    margin: 1% auto;
-    width: 100%;
-    padding: 10px 0;
-}
-
-.columns article {
-    float: left;
-    width: 46%;
-    padding: 1%;
+    height: 100px;
     margin: 1%;
-}
-
-.columns:after {
-    display: block;
-    content: "";
-    clear: both;
 }
 
 main::after {
     content: "";
     display: block;
     clear: both;
+}
+
+footer {
+    background: #CCCCCC;
+    width: 100%;
+    height: 70px;
+    margin: auto;
 }
 
 /* flex styles */
