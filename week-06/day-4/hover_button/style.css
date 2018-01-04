@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+body {
+    background: #333;
+    font-family: monospace;
+    font-size: 24px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover_me {
+    width: 100px;
+    padding: 50px 0;
+    line-height: 0;
+    background: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    transform: rotate(45deg);
+}
+
+.hover_me p {
+    color: #000;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.border {
+    width: 100px;
+    padding: 50px 0;
+    border: 2px solid #FA8072;
+    border-radius: 5px;
+    position: absolute;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 100;
+}
+
+.border:hover {
+    transform: rotate(45deg);
+}
+
+.border:hover + .hover_me p {
+    color: #FA8072;
+}
