@@ -1,0 +1,36 @@
+.row div {
+    width: 100%;
+    height: 70px;
+    font-size: 25px;
+}
+#green1, #green3, #green5, #green7, #green9, #green11 {
+    background-color: #b4dc47;
+    text-align: center;
+    color: #EEE;
+    margin: 0 auto;
+} 
+#green1 {
+    width: 5%;
+}
+#green3 {
+    width: 15%;
+}
+#green5 {
+    width: 25%;
+}
+#green7 {
+    width: 35%;
+}
+#green9 {
+    width: 45%;
+}
+#green11 {
+    width: 55%;
+}
+#brown1, #brown2 {
+    background-color: #7B4F1E;
+    width: 10%;
+    margin: 0 auto;
+    text-align: center;
+    color: #EEE;
+}
