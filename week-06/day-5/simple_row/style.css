@@ -1,0 +1,25 @@
+body {
+    background: #B02AFF;
+    text-align: center;
+    color: #EEE;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    max-width: 960px;
+    margin: 0 auto;
+    grid-gap: 15px;
+}
+
+#container div{
+    background: #FFD62A;
+    padding: 50px;
+}
+
+#container div:nth-child(even) {
+    background: #51D400;
+    padding: 50px;
+}

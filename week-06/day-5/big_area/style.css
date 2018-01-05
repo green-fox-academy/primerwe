@@ -1,0 +1,38 @@
+body {
+    background: #333;
+    text-align: center;
+    color: #EEE;
+    font-family: cursive;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, auto));
+    grid-gap: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#container div {
+    background: #B02AFF;
+    padding: 50px;
+}
+
+#container div:nth-child(4) {
+    background: #51D400;
+    padding: 10%;
+}
+
+.nested {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+
+.nested p {
+    padding: 50px;
+    margin: 0;
+    background: #FFD62A;
+}
