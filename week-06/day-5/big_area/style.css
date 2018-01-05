@@ -1,5 +1,4 @@
 body {
-    background: #333;
     text-align: center;
     color: #EEE;
     font-family: cursive;
@@ -12,6 +11,7 @@ body {
     grid-gap: 10px;
     max-width: 960px;
     margin: 0 auto;
+    background: #333;
 }
 
 #container div {

@@ -1,5 +1,4 @@
 body {
-    background: #B02AFF;
     text-align: center;
     color: #EEE;
     font-size: 30px;
@@ -11,12 +10,14 @@ body {
     grid-template-columns: 20% 60% 20%;
     max-width: 960px;
     margin: 0 auto;
-    grid-gap: 15px;
+/*    grid-gap: 15px;*/
+    background: #B02AFF;
 }
 
 #container div{
     background: #FFD62A;
     padding: 50px;
+    margin: 10px;
 }
 
 #container div:nth-child(even) {
