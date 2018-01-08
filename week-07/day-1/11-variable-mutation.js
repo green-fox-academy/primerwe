@@ -80,6 +80,6 @@ console.log(j % 3 === 1 || j % 5 === 1);
 var k = 'Apple';
 // fill the k variable with its content 4 times
 
-k = k + k + k + k;
+k = k.repeat(4);
 
 console.log(k);
