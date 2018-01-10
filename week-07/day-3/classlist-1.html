@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: ClassList</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .balloon {
+            background-color: lime;
+            border-radius: 100%;
+        }
+
+        .pear {
+            background: lime;
+            padding: 2rem;
+            text-decoration: uppercase;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class="apple">apple</p>
+    <p class="balloon">balloon</p>
+    <p class="cat red-dot">cat</p>
+    <p>dolphin</p>
+
+    <!-- You can work in the html or in a separate js file. Like:
+    <script>
+        1. Does the third p have a red-dot class? If so, alert 'OMG DOTS!'
+        2. If the fourth p has a 'dolphin' class, replace apple's content with 'pear'
+        3. If the first p has an 'apple' class, replace cat's content with 'dog'
+        4. Make apple red by adding a .red class
+        5. Make balloon less balloon-like
+    </script>
+    OR
+    <script src="classlist-1.js"></script> -->
+    <script>
+        'use strict';
+        
+        let apple = document.querySelector('.apple');
+        let baloon = document.querySelector('.balloon');
+        let paragraph = document.querySelectorAll('p');
+        
+        if (paragraph[2].classList.contains('red-dot')) {
+            alert('OMG DOTS!');
+            console.log(paragraph[2].classList.value);
+        }
+        
+        if (paragraph[3].classList.contains('dolphin')) {
+            apple.innerHTML = 'pear';
+        } else {
+            console.log('No, not this time!');
+        }
+        
+        if (paragraph[0].classList.contains('apple')) {
+            document.querySelector('.cat').innerHTML = 'dog';
+            console.log('Cat changed to dog!');
+        } else {
+            console.log('Nothing happened!');
+        }
+        
+        apple.classList.add('red');
+        
+        baloon.style.borderRadius = '50%';
+        baloon.style.width = '100px';
+        baloon.style.textAlign = 'center';
+        baloon.style.padding = '50px 10px';
+        baloon.style.backgroundColor = 'lightblue';
+        
+    </script>
+</body>
+
+</html>
