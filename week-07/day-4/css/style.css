@@ -16,11 +16,10 @@ img {
     width: 100%;
 }
 
-main {
+.container {
     width: 80%;
     margin: 1% auto;
     position: relative;
-    /*    background: #fff;*/
 }
 
 .prev,
@@ -73,6 +72,20 @@ main {
     }
 }
 
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.row {
+    width: 80%;
+    margin: 1% auto;
+}
+
 .row::after {
     content: '';
     display: block;
@@ -82,8 +95,8 @@ main {
 .column {
     /*    float: left;*/
     display: inline-block;
-    width: 10%;
-    margin: 1% auto;
+    width: 12%;
+    margin: 0 auto;
 }
 
 .style {
