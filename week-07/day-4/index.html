@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Image Gallery</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="carousel-container">
+        <article class="slides">
+            <img src="image/image-1.jpeg" alt="Caption One">
+        </article>
+        <article class="slides">
+            <img src="image/image-2.jpeg" alt="Caption Two">
+        </article>
+        <article class="slides">
+            <img src="image/image-3.jpg" alt="Caption Three">
+        </article>
+        <article class="slides">
+            <img src="image/image-4.jpg" alt="Caption Four">
+        </article>
+        
+        <button class="prev" onclick="changeSlides(-1)">prev</button>
+        <button class="next" onclick="changeSlides(1)">next</button>
+    </section>
+    
+    <section class="thumbnail-container">
+        <article class="slides">
+            <img src="image/image-1.jpeg" class="style" alt="Caption One">
+        </article>
+        <article class="slides">
+            <img src="image/image-2.jpeg" class="style" alt="Caption Two">
+        </article>
+        <article class="slides">
+            <img src="image/image-3.jpg" class="style" alt="Caption Three">
+        </article>
+        <article class="slides">
+            <img src="image/image-4.jpg" class="style" alt="Caption Four">
+        </article>
+    </section>
+    
+    <!--<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+    <script src="js/main.js"></script>
+</body>
+</html>
+
