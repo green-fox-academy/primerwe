@@ -7,6 +7,11 @@ body {
     background: radial-gradient(circle at center, rgba(255, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
 }
 
+main {
+    width: 70%;
+    margin: 1% auto;
+}
+
 .slides {
     display: none;
 }
@@ -17,7 +22,7 @@ img {
 }
 
 .container {
-    width: 80%;
+    /*    width: 80%;*/
     margin: 1% auto;
     position: relative;
 }
@@ -82,8 +87,8 @@ img {
 }
 
 .row {
-    width: 80%;
-    margin: 1% auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .row::after {
