@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Image Gallery</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section class="carousel-container">
+    <main class="container">
         <article class="slides fade">
             <img src="image/image-1.jpeg" alt="Caption One">
         </article>
@@ -22,28 +22,50 @@
         <article class="slides fade">
             <img src="image/image-4.jpg" alt="Caption Four">
         </article>
-        
-        <button class="prev" onclick="changeSlides(-1)"></button>
-        <button class="next" onclick="changeSlides(1)"></button>
-    </section>
-    
-    <section class="thumbnail-container">
-        <article class="slides">
-            <img src="image/image-1.jpeg" class="style" alt="Caption One">
+        <article class="slides fade">
+            <img src="image/image-5.jpg" alt="Caption Five">
         </article>
-        <article class="slides">
-            <img src="image/image-2.jpeg" class="style" alt="Caption Two">
+        <article class="slides fade">
+            <img src="image/image-6.jpg" alt="Caption Six">
         </article>
-        <article class="slides">
-            <img src="image/image-3.jpg" class="style" alt="Caption Three">
+        <article class="slides fade">
+            <img src="image/image-7.jpg" alt="Caption Seven">
         </article>
-        <article class="slides">
-            <img src="image/image-4.jpg" class="style" alt="Caption Four">
+        <article class="slides fade">
+            <img src="image/image-8.jpg" alt="Caption Eight">
         </article>
-    </section>
-    
-    <!--<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+
+        <button class="prev" onclick="changeSlides(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlides(1)">&#10095;</button>
+
+        <section class="row">
+            <article class="column">
+                <img src="image/image-1.jpeg" class="cursor style" onclick="currentSlide(1)" alt="Caption One">
+            </article>
+            <article class="column">
+                <img src="image/image-2.jpeg" class="cursor style" onclick="currentSlide(2)" alt="Caption Two">
+            </article>
+            <article class="column">
+                <img src="image/image-3.jpg" class="cursor style" onclick="currentSlide(3)" alt="Caption Three">
+            </article>
+            <article class="column">
+                <img src="image/image-4.jpg" class="cursor style" onclick="currentSlide(4)" alt="Caption Four">
+            </article>
+            <article class="column">
+                <img src="image/image-5.jpg" class="cursor style" onclick="currentSlide(5)" alt="Caption Five">
+            </article>
+            <article class="column">
+                <img src="image/image-6.jpg" class="cursor style" onclick="currentSlide(6)" alt="Caption Six">
+            </article>
+            <article class="column">
+                <img src="image/image-7.jpg" class="cursor style" onclick="currentSlide(7)" alt="Caption Seven">
+            </article>
+            <article class="column">
+                <img src="image/image-8.jpg" class="cursor style" onclick="currentSlide(8)" alt="Caption Eight">
+            </article>
+        </section>
+    </main>
     <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
