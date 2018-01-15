@@ -29,7 +29,7 @@ class Farm {
     constructor(slots) {
         this.slots = slots;
         this.animals = [];
-        for (let i = 0; i < slots; i++) {
+        for (let i = 1; i <= slots; i++) {
             this.animals.push(new Animal('sheep'));
         }
     }
@@ -54,14 +54,15 @@ class Farm {
 
     printReport() {
         if (this.animals.length === 0) {
-            console.log('The farm is bankrupt!');
-        } else if (this.animals.length === this.slots) {
-            console.log('The Farm is full!');
+            console.log('The farm has ' + this.animals.length + ' living animals, we are bankrupted!');
         } else {
             console.log('The farm has ' + this.animals.length + ' living animals.');
         }
+        if (this.animals.length === this.slots) {
+            console.log('The farm has ' + this.animals.length + ' living animals, we are full!');
+        }
     }
-    
+
     progress() {
         for (let i = 0; i < this.animals.length; i++) {
             if ((Math.floor((Math.random() * 2) + 1)) === 1) {
@@ -87,7 +88,9 @@ console.log(SheepFarm.animals); // Should log 20 Animal objects
 
 const button = document.querySelector('button');
 
-button.addEventListener('click', function() {SheepFarm.progress()}, false);
+button.addEventListener('click', function () {
+    SheepFarm.progress()
+}, false);
 
 // Add a click event to the button and call 'progress'
 
