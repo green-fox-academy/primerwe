@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+    font-size: 32px;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    background: coral;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+#up {
+    grid-area: up;
+}
+
+#down {
+    grid-area: down;
+}
+
+#add {
+    grid-area: add;
+}
+
+#remove {
+    grid-area: remove;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(10, auto);
+    grid-gap: 5px;
+    grid-template-areas: ". . ." ". . ." ". up ." ". down ." ". . ." ". . ." ". . ." ". . ." ". add ." ". remove ." ". . ." ". . .";
+}
+
+#buttons button {
+    border-radius: 5px;
+    border-width: thin;
+    padding: 0.5em;
+    width: 50%;
+    text-align: center;
+    font-family: monospace;
+}
+
+button:hover{
+    background: #09f;
+    font-weight: bold;
+}
+
+#elevator table {
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+#elevator table td {
+    border: 1px solid #333;
+    width: 150px;
+    text-align: center;
+}
