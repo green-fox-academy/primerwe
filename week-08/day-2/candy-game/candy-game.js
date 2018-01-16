@@ -29,17 +29,20 @@ function addCandy() {
 }
 
 function addLollypop() {
-
+    
 }
 
-function candiesPerSecond(multiplier){
-    
+function candiesPerSecond(multiplier) {
+    candyNumber = candyNumber + lollypopNumber * multiplier;
+    updateNumber();
 }
 
 function updateNumber() {
     candyCount.textContent = candyNumber;
 }
 
-function makeCandyRain(){
-    
+function makeCandyRain() {
+    multiplier *= 10;
+    candySpeed *= 10;
+    candyPerSec.textContent = candySpeed;
 }
