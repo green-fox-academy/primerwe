@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delayed click</title>
+</head>
+
+<body>
+    <!--Create a simple HTML document with one button. 
+    If the user clicks the button it should wait 2 seconds 
+    and it should show a text under the button: 2 seconds ellapsed-->
+    <button class="button" style="padding: 20px 40px; font-size: 36px; background: #b00; color: #ddd">Click Me!</button>
+    <h1 class="text" style="text-align: center; color: #b00; background: #ddd"></h1>
+    <script>
+        function delay() {
+            setTimeout(function() {
+                document.querySelector('.text').innerHTML = '2 seconds ellapsed';
+            }, 2000);
+        }
+        document.querySelector('.button').addEventListener('click', delay);
+    </script>
+</body>
+
+</html>
