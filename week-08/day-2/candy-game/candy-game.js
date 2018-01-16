@@ -13,7 +13,7 @@ buyLollypop.addEventListener('click', addLollypop);
 let candyPerSec = document.querySelector('dd.speed');
 let candySpeed = 0;
 let multiplier = 1;
-let candyGenerator = setInterval(function(){
+let candyGenerator = setInterval(function () {
     candiesPerSecond(multiplier);
 }, 1000);
 
@@ -21,3 +21,25 @@ let candyMachine = document.querySelector('button.candy-machine');
 candyMachine.addEventListener('click', makeCandyRain);
 
 
+//<dd class="lollypops">🍭🍭🍭</dd>
+
+function addCandy() {
+    candyNumber++;
+    updateNumber();
+}
+
+function addLollypop() {
+
+}
+
+function candiesPerSecond(multiplier){
+    
+}
+
+function updateNumber() {
+    candyCount.textContent = candyNumber;
+}
+
+function makeCandyRain(){
+    
+}
