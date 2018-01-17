@@ -1,10 +1,11 @@
 'use strict';
 
-let btn = document.querySelector('form>button#btn');
-let searchBox = document.querySelector('form>input#searchBox');
+let btn = document.querySelector('button#btn');
+
 
 //function getGiphies() {
 btn.addEventListener('click', function () {
+    let searchBox = document.querySelector('input#searchBox');
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://api.giphy.com/v1/gifs/search?api_key=2NaHf0oqvaBflMtJ9Ya71Xm218wJ9do2&q=' + searchBox.textContent + '&limit=16&offset=0&rating=G&lang=en', true);
     xhr.onload = function () {
@@ -15,7 +16,6 @@ btn.addEventListener('click', function () {
         console.log(content);
     };
     xhr.send();
-
 });
 
 function staticGiphies(item) {
