@@ -15,15 +15,26 @@
 
         h2{
             display: block;
-            width: 50%;
             margin: 30px auto;
+            text-align: center;
+        }
+        
+        p{
+            text-align: center;
+            font-size: 1.1em;
+        }
+        iframe{
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
         }
         
         input,
         button {
             display: block;
-            width: 20%;
+            width: 30%;
             margin: 30px auto;
+            padding: 10px;
         }
     </style>
 </head>
@@ -48,6 +59,7 @@
                 document.body.removeChild(map);
             }
             getCoordinates(data);
+//            makeTheMap(location);
         });
 
         function getCoordinates(data) {
@@ -61,7 +73,15 @@
                     getLocation(location);
                 }
             }
-        xhr.send();
+            /*xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    let location = JSON.parse(xhr.responseText).Results;
+                    location.forEach(function(item) { 
+                        getLocation(item);
+                    })
+                }
+            };*/
+            xhr.send();
         };
 
         function getLocation(location) {
@@ -76,7 +96,7 @@
                     coordinates.textContent = 'The coordinates you are looking for: ' + location.ll;
                 }
                 document.body.appendChild(coordinates);
-            }
+            };
             makeTheMap(location);
         };
 
