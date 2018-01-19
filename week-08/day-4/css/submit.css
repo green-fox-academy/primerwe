@@ -1,0 +1,78 @@
+body {
+    background: #ddd;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+/********************* HEADER ***********************/
+
+header {
+    height: 200px;
+    background: url(image/outer-space-stars.jpg) 0 no-repeat;
+    background-size: cover;
+    border: none;
+    position: relative;
+    text-align: center;
+    color: #333;
+}
+
+header h1 {
+    letter-spacing: 50px;
+    font-size: 3em;
+    padding-top: 60px;
+}
+
+header p {
+    padding-top: 30px;
+    font-weight: bolder;
+}
+
+#logo {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    transform: rotate(15deg);
+}
+
+/***************** MAIN ********************/
+
+main{
+    width: 75%;
+}
+
+section {
+    background: #fff;
+    margin-right: 0;
+    grid-area: 'section';
+}
+
+.wide textarea,
+.wide input {
+    width: 100%;
+    line-height: 2;
+}
+
+.wide div {
+    margin: 10px;
+    padding: 10px;
+}
+
+.red {
+    color: #f00;
+}
+
+.btn {
+    border: none;
+    margin: 0 15px;
+    width: 30%;
+}
+
+.submit {
+    background: #4aa3df;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ddd;
+}

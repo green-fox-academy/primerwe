@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+/********************* HEADER ***********************/
+
+header {
+    height: 200px;
+    background: url(image/outer-space-stars.jpg) 0 no-repeat;
+    background-size: cover;
+    border: none;
+    position: relative;
+    text-align: center;
+    color: #333;
+}
+
+header h1 {
+    letter-spacing: 50px;
+    font-size: 3em;
+    padding-top: 60px;
+}
+
+header p {
+    padding-top: 30px;
+    font-weight: bolder;
+}
+
+#logo {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    transform: rotate(15deg);
+}
+
+/***************** MAIN ********************/
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    background: #fff;
+    margin-right: 0;
+    grid-area: 'section';
+}
+
+section::after,
+aside::after,
+#vote::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#content ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+#content a {
+    color: #777;
+    font-size: 13px;
+}
+
+#content h2 {
+    padding-top: 10px;
+}
+
+#vote {
+    float: left;
+    margin: 10px 20px 0px 10px;
+}
+
+.up,
+.down {
+    width: 30px;
+    padding: 5px;
+}
+
+.score {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.like,
+.dislike {
+    display: none;
+}
+
+.tagline {
+    font-size: 0.8em;
+}
+
+aside {
+    grid-area: 'aside';
+}
+
+.submit {
+    background: #4aa3df;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.submit a {
+    color: #ddd;
+}
+
+aside h2 {
+    font-size: 1em;
+    padding: 10px;
+    background: #fbfbfb;
+}
+
+#about a {
+    color: #4aa3df;
+}
+
+#about {
+    background: #f5f5f5;
+}
+
+#about p {
+    text-align: center;
+    margin: 15px 10px;
+}
+
+#about ul li {
+    line-height: 1.5;
+    margin-left: 40px;
+}
