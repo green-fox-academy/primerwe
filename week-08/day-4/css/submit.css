@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #ddd;
     display: block;
@@ -9,7 +15,7 @@ body {
 
 header {
     height: 200px;
-    background: url(image/outer-space-stars.jpg) 0 no-repeat;
+    background: url(/image/outer-space-stars.jpg) 0 no-repeat;
     background-size: cover;
     border: none;
     position: relative;
@@ -37,25 +43,31 @@ header p {
 
 /***************** MAIN ********************/
 
-main{
-    width: 75%;
+main {
+    margin: 10px 0 0 10px;
 }
 
 section {
     background: #fff;
-    margin-right: 0;
-    grid-area: 'section';
+    padding: 10px;
+    width: 70%;
 }
 
-.wide textarea,
-.wide input {
-    width: 100%;
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+label {
+    margin: 10px;
     line-height: 2;
 }
 
-.wide div {
-    margin: 10px;
-    padding: 10px;
+textarea,
+input {
+    width: 100%;
+    line-height: 2;
 }
 
 .red {
@@ -64,7 +76,7 @@ section {
 
 .btn {
     border: none;
-    margin: 0 15px;
+    margin-top: 10px;
     width: 30%;
 }
 
@@ -72,6 +84,7 @@ section {
     background: #4aa3df;
     text-align: center;
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
     color: #ddd;

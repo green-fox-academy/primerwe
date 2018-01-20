@@ -15,7 +15,7 @@ body {
 
 header {
     height: 200px;
-    background: url(image/outer-space-stars.jpg) 0 no-repeat;
+    background: url(/image/outer-space-stars.jpg) 0 no-repeat;
     background-size: cover;
     border: none;
     position: relative;
@@ -44,12 +44,7 @@ header p {
 /***************** MAIN ********************/
 
 main {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    justify-content: center;
+    position: relative;
     margin: 10px;
 }
 
@@ -59,36 +54,51 @@ a {
 
 section {
     background: #fff;
-    margin-right: 0;
-    grid-area: 'section';
+    position: absolute;
+    float: left;
+    width: 70%;
+}
+
+.content {
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+aside {
+    float: right;
+    width: 29%;
 }
 
 section::after,
-aside::after,
-#vote::after {
+aside::after {
     content: "";
     display: block;
     clear: both;
 }
 
-#content ul li {
+.clearfix {
+    clear: both;
+}
+
+/******************* CONTENT **********************/
+section ul li {
     list-style-type: none;
     display: inline-block;
     padding: 5px 10px;
 }
 
-#content a {
+a {
     color: #777;
     font-size: 13px;
 }
 
-#content h2 {
+h2 {
     padding-top: 10px;
 }
 
-#vote {
+.vote {
     float: left;
-    margin: 10px 20px 0px 10px;
+    margin: 10px 20px 5px 10px;
 }
 
 .up,
@@ -111,10 +121,7 @@ aside::after,
     font-size: 0.8em;
 }
 
-aside {
-    grid-area: 'aside';
-}
-
+/******************** SUBMIT A NEW POST ******************/
 .submit {
     background: #4aa3df;
     text-align: center;
@@ -126,6 +133,8 @@ aside {
 
 .submit a {
     color: #ddd;
+    font-size-adjust: auto;
+    font-size: 1em;
 }
 
 aside h2 {
