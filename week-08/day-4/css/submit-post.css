@@ -1,85 +1,91 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: #ddd;
-  display: block;
-  margin: 0 auto;
-  font-family: 'Lato', sans-serif;
+    background: #ddd;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
 }
 
 /********************* HEADER ***********************/
 
 header {
-  height: 200px;
-  background: url(/image/outer-space-stars.jpg) 0 no-repeat;
-  background-size: cover;
-  border: none;
-  position: relative;
-  text-align: center;
-  color: #333;
+    height: 200px;
+    background: url(/image/outer-space-stars.jpg) 0 no-repeat;
+    background-size: cover;
+    border: none;
+    position: relative;
+    text-align: center;
+    color: #333;
 }
 
 header h1 {
-  letter-spacing: 50px;
-  font-size: 3em;
-  padding-top: 60px;
+    letter-spacing: 50px;
+    font-size: 3em;
+    padding-top: 60px;
 }
 
 header p {
-  padding-top: 30px;
-  font-weight: bolder;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
+    padding-top: 30px;
+    font-weight: bolder;
 }
 
 #logo {
-  position: absolute;
-  top: 60px;
-  left: 60px;
-  transform: rotate(15deg);
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    transform: rotate(15deg);
 }
 
 /***************** MAIN ********************/
 
 main {
-  margin: 10px 0 0 10px;
+    margin: 10px 0 0 10px;
 }
 
 section {
-  background: #fff;
-  padding: 10px;
-  width: 70%;
+    background: #fff;
+    padding: 10px;
+    width: 70%;
+}
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 label {
-  margin: 10px;
-  line-height: 2;
+    margin: 10px;
+    line-height: 2;
 }
 
 textarea,
 input {
-  width: 100%;
-  line-height: 2;
+    width: 100%;
+    line-height: 2;
 }
 
 .red {
-  color: #f00;
+    color: #f00;
 }
 
 .btn {
-  width: 30%;
-  background: #4aa3df;
-  border: none;
-  padding: 10px;
-  margin: 10px auto;
-  font-weight: bold;
-  color: #ddd;
-  text-align: center;
+    border: none;
+    margin-top: 10px;
+    width: 30%;
+}
+
+.submit {
+    background: #4aa3df;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ddd;
 }
