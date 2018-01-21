@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +13,19 @@
     <header>
         <img src="image/reddit_logo.png" id="logo" alt="logo">
         <h1>SPACE</h1>
-        <p>POST TO R/SPACE</p>
+        <p><a href="index.html">POST TO R/SPACE</a></p>
     </header>
     <main>
-        <section class="wide">
+        <section class="post_form">
             <form>
-                <div>
-                    <label for="title" required><span class="red">*</span>title:</label>
-                    <textarea id="title" name="title" rows="2"></textarea>
-                </div>
-                <div>
-                    <label for="url">URL</label>
-                    <input id="url" name="url">
-                </div>
+                <label for="title"><span class="red">*</span>Title:</label>
+                <textarea id="title" name="title" rows="2"></textarea>
+                <label for="url">URL</label>
+                <input type="text" id="url" name="url">
             </form>
         </section>
-        <button class="btn submit">SUBMIT</button>
+        <button class="btn">SUBMIT</button>
     </main>
-
-    <script src="js/main.js"></script>
+    <script src="js/posts.js"></script>
 </body>
-
 </html>

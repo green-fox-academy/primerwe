@@ -1,17 +1,19 @@
 'use strict';
 
-let body = document.querySelector('body');
+//let body = document.querySelector('body');
 let apiUrl = 'https://time-radish.glitch.me';
+let xhr = new XMLHttpRequest();
 
 let getPosts = function () {
-    let xhr = new XMLHttpRequest();
     xhr.open('GET', apiUrl + '/posts');
-    xhr.send(null);
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
+        if (xhr.readyState === xhr.DONE && xhr.status === 200) {
             let datas = JSON.parse(xhr.responseText).posts;
             console.log(datas);
             for (let i = 0; i < datas.length; i++) {
+                if (datas[i].owner === null){
+                    datas[i].owner = 'Annonymus';
+                }
                 const htmlContent = `
                 <div class="vote">
                     <button class="arrow up">+</button>
@@ -19,11 +21,11 @@ let getPosts = function () {
                     <button class="arrow down">-</button>
                 </div>
                 <div class="content">
-                    <h2>${datas[i].title}</h2>
-                    <p class="tagline">submitted</p>
+                    <h2>${datas[i].title} <span class="postUrl">${datas[i].url}</span></h2>
+                    <p class="tagline">submitted ${parseInt(datas[i].timestamp/1000/60/60/24)} days ago by ${datas[i].owner}</p>
                     <ul>
-                        <li><a href="#">Modify</a></li>
-                        <li><a href="#">Remove</a></li>
+                        <a href="#">Modify</a>
+                        <a href="#">Remove</a>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
@@ -33,6 +35,7 @@ let getPosts = function () {
             };
         }
     }
+    xhr.send();
 }
 
 getPosts();
