@@ -86,21 +86,23 @@ section ul li {
   list-style-type: none;
   display: inline-block;
   padding: 5px 10px;
-}
-
-a {
   color: #777;
   font-size: 13px;
+  cursor: pointer;
 }
 
 h2 {
   padding-top: 10px;
 }
 
-.postUrl{
-    font-size: 0.6em;
-    color: #333;
-    font-weight: 300;
+.posturl {
+  font-size: 0.6em;
+  color: #333;
+  font-weight: 300;
+}
+
+.blue {
+  color: #4aa3df;
 }
 
 .vote {
@@ -108,10 +110,19 @@ h2 {
   margin: 10px 20px 5px 10px;
 }
 
-.up,
-.down {
+.arrow {
   width: 30px;
-  padding: 5px;
+  height: 30px;
+}
+
+.up {
+  background-image: url(assets/upvote.png);
+  background-size: cover;
+}
+
+.down {
+  background-image: url(assets/downvote.png);
+  background-size: cover;
 }
 
 .score {
