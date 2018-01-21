@@ -3,29 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Reddit: Frontend</title>
+    <title>The Reddit Frontend</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-    <link rel="stylesheet" href="css/submit.css" type="text/css">
+    <link rel="stylesheet" href="css/submit-post.css">
 </head>
-
 <body>
     <header>
         <img src="image/reddit_logo.png" id="logo" alt="logo">
         <h1>SPACE</h1>
-        <p><a href="index.html">POST TO R/SPACE</a></p>
+        <P><a href="index.html">POST TO R/SPACE</a></P>
     </header>
     <main>
-        <section class="post_form">
+        <section>
             <form>
                 <label for="title"><span class="red">*</span>Title:</label>
-                <textarea id="title" name="title" rows="2"></textarea>
-                <label for="url">URL</label>
-                <input type="text" id="url" name="url">
+                <textarea id="post_title" name="title" rows="2"></textarea>
+                <label for="post_url">URL</label>
+                <input type="text" id="post_url" name="url">
             </form>
         </section>
-        <button class="btn">SUBMIT</button>
     </main>
-    <script src="js/posts.js"></script>
+    <button class="submit_button">SUBMIT</button>
+    <script src="js/submit-post.js"></script>
 </body>
 </html>
