@@ -1,7 +1,7 @@
 'use strict';
 
 let btn = document.querySelector('button#btn');
-
+let imageHTML = document.getElementById('giphy');
 
 //function getGiphies() {
 btn.addEventListener('click', function () {
@@ -9,17 +9,17 @@ btn.addEventListener('click', function () {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://api.giphy.com/v1/gifs/search?api_key=2NaHf0oqvaBflMtJ9Ya71Xm218wJ9do2&q=' + searchBox + '&limit=16&offset=0&rating=G&lang=en', true);
     xhr.onload = function () {
-        let content = JSON.parse(xhr.responseText).data;
-        content.forEach(function(item) {
-            staticGiphies(item);
+        let content = JSON.parse(xhr.responseText)
+        let mainContent = content.response.data;
+        mainContent.forEach(function(item) {
+            getStaticGiphies(item);
         });
         console.log(content);
     };
     xhr.send();
 });
 
-function staticGiphies(item) {
-    let imageHTML = document.querySelector('ul#images');
+function getStaticGiphies(item) {
     let image = document.createElement('img');
     
     image.src = item.images['fixed_height_still'].url;
