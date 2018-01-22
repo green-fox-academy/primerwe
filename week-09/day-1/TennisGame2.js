@@ -11,20 +11,20 @@ var TennisGame2 = function (player1Name, player2Name) {
     this.player2Name = player2Name;
 };
 
-function determineScore2(score) {
+function determineGameScore(score) {
     return {
         0: 'Love',
         1: 'Fifteen',
         2: 'Thirty',
-        3: 'Forty',
-    }[score];
+        3: 'Forty'
+    } [score];
 }
 
 TennisGame2.prototype.getScore = function () {
     let score = '';
 
     if (this.player1point === this.player2point && this.player1point < 3) {
-        score = determineScore2(this.player1point)
+        score = determineGameScore(this.player1point)
         score += '-All';
     }
 
@@ -32,26 +32,26 @@ TennisGame2.prototype.getScore = function () {
         score = 'Deuce';
 
     if (this.player1point > 0 && this.player2point === 0) {
-        this.player1result = determineScore2(this.player1point)
+        this.player1result = determineGameScore(this.player1point)
         this.player2result = 'Love';
         score = this.player1result + '-' + this.player2result;
     }
 
     if (this.player2point > 0 && this.player1point === 0) {
         this.player1result = 'Love';
-        this.player2result = determineScore2(this.player2point);
+        this.player2result = determineGameScore(this.player2point);
         score = this.player1result + '-' + this.player2result;
     }
 
     if (this.player1point > this.player2point && this.player1point < 4) {
-        this.player1result = determineScore2(this.player1point);
-        this.player2result = determineScore2(this.player2point);
+        this.player1result = determineGameScore(this.player1point);
+        this.player2result = determineGameScore(this.player2point);
         score = this.player1result + '-' + this.player2result;
     }
 
     if (this.player2point > this.player1point && this.player2point < 4) {
-        this.player2result = determineScore2(this.player2point);
-        this.player1result = determineScore2(this.player1point);
+        this.player2result = determineGameScore(this.player2point);
+        this.player1result = determineGameScore(this.player1point);
         score = this.player1result + '-' + this.player2result;
     }
 
