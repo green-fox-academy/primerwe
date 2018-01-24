@@ -6,6 +6,11 @@
 __pycache__
 *.pyo
 *.pyc
+/node_modules
+
+# Only apps should have lockfiles
+yarn.lock
+package-lock.json
 
 # Compiled source #
 ###################
