@@ -15,7 +15,7 @@ body {
 
 header {
   height: 200px;
-  background: url(/image/outer-space-stars.jpg) 0 no-repeat;
+  background: url(../image/outer-space-stars.jpg) 0 no-repeat;
   background-size: cover;
   border: none;
   position: relative;
