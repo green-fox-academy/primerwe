@@ -24,6 +24,6 @@ test('test for not equal length', function (t) {
 });
 
 test('test for numbers', function (t) {
-  t.throws(anagram.bind(this, (123, 321)), Error);
+  t.throws(anagram.bind(this, (123, 123)), Error);
   t.end();
 })
