@@ -42,7 +42,37 @@ app.get('/greeter', (req, res) => {
 });
 
 app.get('/appenda/:appendable', (req, res) => {
-  res.json({"appended": req.params.appendable + "a"})
-})
+  res.json({
+    "appended": req.params.appendable + "a"
+  })
+});
+
+app.post('/dountil/:item', (req, res) => {
+  if (req.params.item === "sum") {
+    let number = req.body.until;
+    let result = 0;
+    while (number >= 0) {
+      result += number;
+      number--;
+    }
+    res.json({
+      "result": result
+    })
+  } else if (req.params.item === "factor") {
+    let number = req.body.until;
+    let result = 1;
+    while (number > 0) {
+      result *= number;
+      number--;
+    }
+    res.json({
+      "result": result
+    })
+  } else {
+    res.json({
+      "error": "Please provide a number!"
+    })
+  }
+});
 
 app.listen(8080);
