@@ -13,17 +13,19 @@ function getPosts() {
     title.value === '' || url.value === '' ? alert('Required!') : formatTexts(title.value, url.value);
 };
 
-function formatTexts(title, url, owner){
-    submitPosts(`{ "title": "${title}", "url": "${url}"}, "owner": 'betterLateThanNever'`);
+function formatTexts(title, url, owner) {
+    submitPosts(`{ "title": "${title}", "url": "${url}", "owner": "betterLateThanNever"}`);
 };
 
 function submitPosts(message) {
     let link = 'https://time-radish.glitch.me/posts';
     let xhr = new XMLHttpRequest();
     xhr.open('POST', link);
+    xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-type", "application/json");
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200 ? console.log('Ready!') : console.log('Failed!');
     }
-    xhr.send(message);
-}
+    console.log(message);
+    xhr.send(JSON.stringify(message));
+};

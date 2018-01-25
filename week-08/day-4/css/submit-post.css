@@ -93,4 +93,5 @@ input {
   margin: 10px;
   font-weight: bold;
   color: #ddd;
+  cursor: pointer;
 }
