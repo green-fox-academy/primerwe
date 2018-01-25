@@ -58,7 +58,6 @@ app.post('/dountil/:item', (req, res) => {
     res.json({
       "result": result
     });
-    console.log(result);
   } else if (req.params.item === "factor") {
     let number = req.body.until;
     let result = 1;
@@ -69,7 +68,6 @@ app.post('/dountil/:item', (req, res) => {
     res.json({
       "result": result
     });
-    console.log(result);
   } else {
     res.json({
       "error": "Please provide a number!"
