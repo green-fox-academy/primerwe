@@ -54,20 +54,22 @@ app.post('/dountil/:item', (req, res) => {
     while (number >= 0) {
       result += number;
       number--;
-    }
+    };
     res.json({
       "result": result
-    })
+    });
+    console.log(result);
   } else if (req.params.item === "factor") {
     let number = req.body.until;
     let result = 1;
     while (number > 0) {
       result *= number;
       number--;
-    }
+    };
     res.json({
       "result": result
-    })
+    });
+    console.log(result);
   } else {
     res.json({
       "error": "Please provide a number!"
