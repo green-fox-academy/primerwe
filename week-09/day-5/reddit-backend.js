@@ -11,18 +11,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded());
 
-/*const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '123456',
-  database: 'bookstore'
-});
-
-connection.connect((err) => {
-    if (err) throw err;
-    console.log('Connecteion established!');
-});*/
-
 let posts = [
   {
   "id": 25,
@@ -70,3 +58,6 @@ app.post('/posts', function (req, res) {
   posts.push(req.body);
 });
 
+app.listen(port, function () {
+  console.log("The app is running at localhost: " + port);
+});
