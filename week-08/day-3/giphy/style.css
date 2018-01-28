@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    vertical-align: middle;
+    justify-content: center;
+    margin-left: 50px;
+    background: #ccc;
+}
+
+
+main {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    width: 100%;
+    background: #eee;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#content {
+    margin: 20px 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+input {
+    margin-left: 20px;
+}
+
+#numberBox{
+    width: 10%;
+}
+
+button {
+    background-color: #4ac;
+    margin-left: 40px;
+    width: 20%;
+    border: 1px solid #4ac;
+    border-radius: 5px;
+}
+
+img {
+    width: 80%;
+}
