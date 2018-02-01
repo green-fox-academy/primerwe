@@ -68,5 +68,5 @@ app.get('/books', function (req, res) {
 
 connecToMySql();
 app.listen(port, function () {
-  console.log("The app is running at localhost: " + port);
+  console.log('The app is running at localhost: ' + port);
 });
