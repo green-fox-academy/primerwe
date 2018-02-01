@@ -7,5 +7,3 @@
 [ToDo-App](https://github.com/greenfox-academy/primerwe-todo-app)
 
 [Corsac-basic-exam](https://github.com/primerwe/corsac-basic-exam)
-
-[Pallida-orientation-exam](https://github.com/primerwe/pallida-orientation-exam)
