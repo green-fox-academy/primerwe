@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: cursive;
+  background: #333;
+}
+
+main {
+  width: 80%;
+  margin: 10px auto;
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.query_btn {
+  margin: 0 20px;
+  font-family: cursive;
+  border: none;
+  padding: 5px;
+  line-height: 1.5;
+  background: #57f;
+  color: #fff;
+  border-radius: 5px;
+}
+
+input {
+  font-family: cursive;
+}
+
+#police, #diplomat{
+  margin: 0 5px 0 15px;
+}
