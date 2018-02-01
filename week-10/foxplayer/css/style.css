@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section{
+  height: 200px;
+}
+
+#logo {
+  background: limegreen;
+  float: left;
+  width: 25%;
+}
+
+#currently {
+  background: tomato;
+}
+
+#currently::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+#playlist {
+  background: skyblue;
+  float: left;
+  width: 50%;
+}
+
+#tracks {
+  background: pink;
+}
+
+#tracks::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+#control-panel {
+  background: orange;
+}
