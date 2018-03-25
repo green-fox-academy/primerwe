@@ -88,20 +88,20 @@ function convertTime(timestamp) {
 
 function upVote(postId) {
     document.querySelector('.arrow.up').addEventListener('click', function () {
-        connection('PUT', `https://time-radish.glitch.me/posts/${postId}/upvote`);
+        connection('PUT', `${apiUrl}/posts/${postId}/upvote`);
     })
 }
 
 function downVote(postId) {
     document.querySelector('.arrow.down').addEventListener('click', function () {
-        connection('PUT', `https://time-radish.glitch.me/posts/${postId}/downvote`);
+        connection('PUT', `${apiUrl}/posts/${postId}/downvote`);
     })
 }
 
 function deletePost(postId) {
     document.querySelector('#remove').addEventListener('click', function () {
-        connection('DELETE', `https://time-radish.glitch.me/posts/${postId}`)
+        connection('DELETE', `${apiUrl}/posts/${postId}`)
     })
 }
 
-requestPosts(apiUrl + '/posts');
+requestPosts(`${apiUrl}/posts`);

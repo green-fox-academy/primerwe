@@ -12,9 +12,6 @@ function connect(method, url, callback) {
       let request = JSON.parse(xhr.response);
       callback(request);
     }
-    /*else {
-         console.log('Connection failed!');
-       }*/
   }
   xhr.send();
 };
