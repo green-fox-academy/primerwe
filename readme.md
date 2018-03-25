@@ -23,8 +23,8 @@
 For the final exam, please prepare links to your GitHub repository for each of these topics:
 
 - Week 9 Bookstore:
-[Event handling frontend side / Initiating an AJAX request / Using callbacks](https://github.com/greenfox-academy/primerwe/blob/master/week-09/day-5/assets/frontend.js)
-[Creating an Express endpoint in Node.js / Creating a database call in Node.js](https://github.com/greenfox-academy/primerwe/blob/master/week-09/day-5/bookstore.js)
+    - [Event handling frontend side / Initiating an AJAX request / Using callbacks](https://github.com/greenfox-academy/primerwe/blob/master/week-09/day-5/assets/frontend.js)
+    - [Creating an Express endpoint in Node.js / Creating a database call in Node.js](https://github.com/greenfox-academy/primerwe/blob/master/week-09/day-5/bookstore.js)
 
 - Week 10 Pallida-exam-retake:
 [Event handling frontend side / Initiating an AJAX request / Using callbacks](https://github.com/greenfox-academy/primerwe/blob/master/week-10/pallida-exam-retake/assets/frontend.js)
