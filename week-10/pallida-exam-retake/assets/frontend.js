@@ -60,7 +60,7 @@ button.addEventListener('click', function () {
   let selectedQuantity = document.querySelector('#quantity')
   let query = `/price-check?item=${selectedItem.value}&size=${selectedSize.value}&quantity=${selectedQuantity.value}`;
   connect('GET', url + query, createReport);
-  connect('GET', url + "/warehouse", createTable);
+  connect('GET', `${url}/warehouse`, createTable);
 });
 
-connect('GET', url + "/warehouse", createTable)
+connect('GET', `${url}/warehouse`, createTable)

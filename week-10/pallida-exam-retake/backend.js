@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/warehouse', function (req, res) {
-  connection.query(`SELECT * FROM warehouse`, function (err, rows) {
+  connection.query(`SELECT * FROM warehouse`, (err, rows) => {
     res.send({
       "result": "ok",
       "clothes": rows,
@@ -41,7 +41,7 @@ app.get('/warehouse', function (req, res) {
 });
 
 app.get('/price-check', function (req, res) {
-  connection.query(`SELECT * FROM warehouse WHERE item_name LIKE "%${req.query.item}%" AND size="${req.query.size}"`, function (err, row) {
+  connection.query(`SELECT * FROM warehouse WHERE item_name LIKE ? AND size = ?`, [req.query.item, req.query.size], (err, row) => {
     if (row.in_store < req.query.quantity) {
       res.send({
         "result": "error, we don't have enough items in store",
