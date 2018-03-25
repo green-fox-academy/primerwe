@@ -22,11 +22,8 @@
 
 For the final exam, please prepare links to your GitHub repository for each of these topics:
 
-- Event handling frontend side
-- Initiating an AJAX request
-- Using callbacks
-- Creating an Express endpoint in Node.js
-- Creating a database call in Node.js
+- [Event handling frontend side / Initiating an AJAX request / Using callbacks](https://github.com/greenfox-academy/primerwe/blob/master/week-10/pallida-exam-retake/assets/frontend.js)
+- [Creating an Express endpoint in Node.js / Creating a database call in Node.js](https://github.com/greenfox-academy/primerwe/blob/master/week-10/pallida-exam-retake/backend.js)
 
 - [Unit test using a testing library Python](https://github.com/greenfox-academy/primerwe/tree/master/week-04/day-3)
 - [Unit test using a testing library JavaScript](https://github.com/greenfox-academy/primerwe/tree/master/week-09/day-3)
