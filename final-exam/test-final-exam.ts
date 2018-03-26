@@ -21,7 +21,7 @@ test('with empty list', (t) => {
 
 test('test with one element', (t) => {
   const actual = secondBiggestElement([5]);
-  const expected = 5;
+  const expected = undefined;
 
   t.equal(actual, expected);
   t.end();
