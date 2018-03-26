@@ -4,7 +4,7 @@ const test = require('tape');
 const secondBiggestElement = require('./final-exam.ts');
 
 test('return the second biggest number', (t) => {
-  const actual = secondBiggestElement([9, 1, 5, 4, 8]);
+  const actual = secondBiggestElement([9, -1, 5, 4, 8]);
   const expected = 8;
 
   t.equal(actual, expected);
