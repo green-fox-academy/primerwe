@@ -57,7 +57,7 @@ class Sponsor(Person):
         print("My goal is: Hire brilliant junior software developers.")
     
     
-class PallidaClass(object):
+class CorsacClass(object):
     def __init__(self, class_name, students = [], mentors = []):
         self.class_name = class_name
         self.students = students
@@ -72,7 +72,7 @@ class PallidaClass(object):
             self.mentors.append(mentor)
             
     def info(self):
-        print("Pallida " + format(self.class_name) + " class has " + str(len(self.students)) + " students and "  + str(len(self.mentors)) + " mentors.")
+        print("Corsac " + format(self.class_name) + " class has " + str(len(self.students)) + " students and "  + str(len(self.mentors)) + " mentors.")
 
 
 people = []
@@ -105,9 +105,9 @@ for member in people:
     member.introduce()
     member.get_goal()
 
-badass = PallidaClass('BADA55')     #change from LagopusClass to PallidaClass
-badass.add_student(student);
-badass.add_student(john);
-badass.add_mentor(mentor);
-badass.add_mentor(gandhi);
-badass.info();
+badcat = CorsacClass('#B4DC47')     #change from LagopusClass to PallidaClass to CorsacClass
+badcat.add_student(student)
+badcat.add_student(john)
+badcat.add_mentor(mentor)
+badcat.add_mentor(gandhi)
+badcat.info()
