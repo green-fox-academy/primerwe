@@ -36,8 +36,56 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  connection.query(`SELECT student_name FROM students`, (err, rows) => {
-    res.send({
+  connection.query(`SELECT * FROM students`, (err, rows) => {
+    if (err) {
+      res.status(500);
+      res.json({
+        message: "Something went wrong",
+      })
+    }
+    res.json({
+      "students": rows
+    })
+  })
+});
+
+app.get('/badcat', (req, res) => {
+  connection.query(`SELECT * FROM students WHERE class = 'badcat'`, (err, rows) => {
+    if (err) {
+      res.status(500);
+      res.json({
+        message: "Something went wrong",
+      })
+    }
+    res.json({
+      "students": rows
+    })
+  })
+});
+
+app.get('/asbest', (req, res) => {
+  connection.query(`SELECT * FROM students WHERE class = 'asbest'`, (err, rows) => {
+    if (err) {
+      res.status(500);
+      res.json({
+        message: "Something went wrong",
+      })
+    }
+    res.json({
+      "students": rows
+    })
+  })
+});
+
+app.get('/please', (req, res) => {
+  connection.query(`SELECT * FROM students WHERE class = 'please'`, (err, rows) => {
+    if (err) {
+      res.status(500);
+      res.json({
+        message: "Something went wrong",
+      })
+    }
+    res.json({
       "students": rows
     })
   })

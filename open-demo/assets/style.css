@@ -36,49 +36,68 @@ section {
   margin-bottom: 25px;
 }
 
-.form {
+.left {
   text-align: left;
-  padding: 10px 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
-.form select {
-  font-size: 0.8em;
-  margin-bottom: 25px;
+#heading {
+  padding-left: 0;
 }
 
 .foxes {
-  column-count: 6;
-  column-width: auto;
+  columns: 120px;
+  column-gap: 3.5em;
   padding: 0;
   text-align: justify;
 }
 
-input[type=checkbox] {
-  margin: 5px 10px 5px 0;
+.hide {
+  display: none;
 }
+
+/* input[type=checkbox] {
+  margin: 5px 10px 5px 0;
+} */
 
 ul {
   list-style-type: none;
 }
 
 ol {
-  column-gap: 70px;
+  /* column-gap: 70px; */
 }
 
-ul > li,
-ol > li {
+ul>li,
+ol>li {
   padding: 10px 0;
+  break-inside: avoid
 }
 
-button {
+.btn {
   border-radius: 10px;
   border-bottom-width: thick;
   border-bottom-color: #1AAA57;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  color: #1aaa57;
 }
 
 #start {
   margin: 25px 0;
   padding: 25px;
   font-size: 1em;
+  font-weight: 400;
   color: #1AAA57;
+}
+
+.upper {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#message {
+  font-size: 40px;
+  color: #b00;
 }
