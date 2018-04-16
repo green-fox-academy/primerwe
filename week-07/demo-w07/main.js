@@ -36,7 +36,6 @@ function clearHeadItems() {
 }
 
 function createTableHead() {
-  clearHeadItems();
   let tableHead = document.querySelector('thead#tablehead');
   let tableRow = document.createElement('tr');
   let tableHeadNumber = document.createElement('th');
@@ -49,7 +48,6 @@ function createTableHead() {
 }
 
 function createShuffleResult(array) {
-  clearBodyItems();
   let shuffledStudents = shuffleArray(students);
   let tableBody = document.querySelector('tbody#tablebody');
   for (let i = 0; i < shuffledStudents.length; i++) {
@@ -66,6 +64,8 @@ function createShuffleResult(array) {
 
 let button = document.querySelector('button.start');
 button.addEventListener('click', function () {
+  clearHeadItems();
+  clearBodyItems();
   createTableHead();
   createShuffleResult(students)
 });
