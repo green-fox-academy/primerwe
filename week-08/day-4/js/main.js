@@ -1,6 +1,7 @@
 'use strict';
 
-let apiUrl = 'https://time-radish.glitch.me';
+// let apiUrl = 'https://time-radish.glitch.me';
+let apiUrl = 'http://localhost:8080';
 
 function requestPosts(url) {
     let request = new XMLHttpRequest();
@@ -11,7 +12,7 @@ function requestPosts(url) {
     request.send();
     request.onload = function () {
         if (request.status === 200) {
-            loadPost(JSON.parse(request.responseText).posts)
+            loadPost(JSON.parse(request.responseText))
         } else {
             console.log('status not OK!')
         }

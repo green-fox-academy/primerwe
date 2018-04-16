@@ -18,7 +18,8 @@ function formatTexts(title, url, owner) {
 };
 
 function submitPosts(message) {
-    let link = 'https://time-radish.glitch.me/posts';
+    // let link = 'https://time-radish.glitch.me/posts';
+    let link = 'http://localhost:8080/posts';
     let xhr = new XMLHttpRequest();
     xhr.open('POST', link);
     xhr.setRequestHeader("Accept", "application/json");
