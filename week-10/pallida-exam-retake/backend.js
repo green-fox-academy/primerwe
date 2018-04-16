@@ -3,7 +3,7 @@
 const mysql = require('mysql');
 const express = require('express');
 const cors = require('cors');
-const PORT = 8080;
+const PORT = 3000;
 const app = express();
 
 app.use(express.static(__dirname + '/assets'));
@@ -13,7 +13,7 @@ app.use(cors());
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '123456',
+  password: 'root',
   database: 'warehouse',
 });
 
@@ -21,7 +21,7 @@ function connecToMySql() {
   connection.connect((err) => {
     if (err) {
       console.log("Connection failed!");
-      return;
+      throw err;
     };
     console.log("Connecteion established!");
   });

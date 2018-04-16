@@ -1,6 +1,6 @@
 'use strict';
 
-const url = 'http://localhost:8080';
+const url = 'http://localhost:3000';
 const button = document.querySelector('#total');
 let message = document.querySelector('section.message');
 let table = document.querySelector('table');
