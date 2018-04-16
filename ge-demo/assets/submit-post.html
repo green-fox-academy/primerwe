@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reddit Frontend</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" href="submit-post.css">
+</head>
+<body>
+    <header>
+        <img src="reddit_logo.png" id="logo" alt="logo">
+        <h1>SPACE</h1>
+        <P><a href="index.html">POST TO R/SPACE</a></P>
+    </header>
+    <main>
+        <section>
+            <form>
+                <label for="title"><span class="red">*</span>Title:</label>
+                <textarea id="post_title" name="title" rows="2"></textarea>
+                <label for="post_url">URL</label>
+                <input type="text" id="post_url" name="url">
+            </form>
+        </section>
+    </main>
+    <button class="submit_button">SUBMIT</button>
+    <script src="submit-post.js"></script>
+</body>
+</html>

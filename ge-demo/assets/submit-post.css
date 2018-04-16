@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ddd;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+
+/********************* HEADER ***********************/
+
+header {
+  height: 200px;
+  background: url(outer-space-stars.jpg) 0 no-repeat;
+  background-size: cover;
+  border: none;
+  position: relative;
+  text-align: center;
+  color: #333;
+}
+
+header h1 {
+  letter-spacing: 50px;
+  font-size: 3em;
+  padding-top: 60px;
+}
+
+header p {
+  padding-top: 30px;
+  font-weight: bolder;
+}
+
+#logo {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  transform: rotate(15deg);
+}
+
+header a {
+  text-decoration: none;
+  color: #333;
+}
+
+header a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/***************** MAIN ********************/
+
+main {
+  margin: 10px 0 0 10px;
+}
+
+section {
+  background: #fff;
+  padding: 10px;
+  width: 70%;
+}
+
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+label {
+  margin: 10px;
+  line-height: 2;
+}
+
+textarea,
+input {
+  width: 100%;
+  line-height: 2;
+}
+
+.red {
+  color: #f00;
+}
+
+.submit_button {
+  border: none;
+  width: 30%;
+  background: #4aa3df;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  color: #ddd;
+  cursor: pointer;
+}
