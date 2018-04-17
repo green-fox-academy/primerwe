@@ -11,31 +11,35 @@ function connect(method, url, callback) {
   xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.onreadystatechange = function () {
-    if (xhr.readyState === xhr.DONE && xhr.status === 200) {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
       callback(JSON.parse(xhr.responseText));
-      console.log(JSON.parse(xhr.responseText));
     }
   };
   xhr.send();
 };
 
-let studentsList = [];
-
 function createStudentList(result) {
   h2.textContent = 'Foxes:';
   ul.innerHTML = '';
   result.students.forEach(element => {
-    ul.innerHTML += `<li>${element.name}</li>`;
+    ul.innerHTML +=
+    `<li>
+      <input type="checkbox" id="name${element.id}" name="name" value="${element.name}" onclick="createStudentArray(this)">
+      <label for="name${element.id}">${element.name}</label>
+    </li>`;
   });
-  createStudentArray()
 }
 
-function createStudentArray() {
-  let items = document.querySelectorAll('ul>li');
-  studentsList = Array.prototype.map.call(items, (obj) => {
-    return obj.textContent;
-  })
-  console.log('Students list:', studentsList);
+let studentsList = [];
+
+function createStudentArray(elem) {
+  let items = document.querySelectorAll('input[name="name"]:checked');
+  if(items) {
+    studentsList = Array.prototype.map.call(items, (obj) => {
+      return obj.value;
+    })
+  }
+  console.log('createStudentArray:', studentsList);
   return studentsList;
 }
 
@@ -91,6 +95,7 @@ clear.addEventListener('click', () => {
 let message = document.querySelector('#message');
 let stu = document.querySelector('#students');
 let res = document.querySelector('#result');
+
 button.addEventListener('click', () => {
   if (!studentsList.length) {
     message.innerHTML = "Please select class first!";
