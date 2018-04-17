@@ -35,20 +35,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/assets/index.html');
 });
 
-app.get('/students', (req, res) => {
-  connection.query(`SELECT * FROM students`, (err, rows) => {
-    if (err) {
-      res.status(500);
-      res.json({
-        message: "Something went wrong",
-      })
-    }
-    res.json({
-      "students": rows
-    })
-  })
-});
-
 app.get('/badcat', (req, res) => {
   connection.query(`SELECT * FROM students WHERE class = 'badcat'`, (err, rows) => {
     if (err) {
@@ -90,6 +76,46 @@ app.get('/please', (req, res) => {
     })
   })
 });
+
+app.get('/students', (req, res) => {
+  connection.query(`SELECT * FROM students`, (err, rows) => {
+    if (err) {
+      res.status(500);
+      res.json({
+        message: "Something went wrong",
+      })
+    }
+    res.json({
+      "students": rows
+    })
+  })
+});
+
+app.post('/students', (req, res) => {
+  connection.query(`INSERT INTO students SET ?`, req.body, (err, result) => {
+    if(err) {
+      res.status(500);
+      res.json({
+        message: "Database error!",
+      })
+    }
+    console.log("Success!");
+    res.send()
+  })
+})
+
+app.delete('/students', (req,res) => {
+  connection.query(`DELETE FROM students WHERE name = ? AND class = ?`, [req.params.name, req.params.class], (err, result) => {
+    if(err) {
+      res.status(500);
+      res.json({
+        message: "Database error!",
+      })
+    }
+    console.log("Deleted!");
+    res.send()
+  })
+})
 
 connecToMySql();
 app.listen(PORT, () => console.log(`The app is running at localhost: ${PORT}`));
