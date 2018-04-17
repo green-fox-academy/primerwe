@@ -25,8 +25,12 @@ function createStudentList(result) {
   h2.textContent = 'Foxes:';
   ul.innerHTML = '';
   result.students.forEach(element => {
-    ul.innerHTML += `<li>${element.name}`;
+    ul.innerHTML += `<li>${element.name}</li>`;
   });
+  createStudentArray()
+}
+
+function createStudentArray() {
   let items = document.querySelectorAll('ul>li');
   studentsList = Array.prototype.map.call(items, (obj) => {
     return obj.textContent;
