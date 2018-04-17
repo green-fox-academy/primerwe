@@ -36,6 +36,21 @@ section {
   margin-bottom: 25px;
 }
 
+a {
+  text-decoration: none;
+  color: #1aaa57;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul>li,
+ol>li {
+  padding: 10px 0;
+  break-inside: avoid
+}
+
 .left {
   text-align: left;
   margin-bottom: 0;
@@ -55,20 +70,6 @@ section {
 
 .hide {
   display: none;
-}
-
-/* input[type=checkbox] {
-  margin: 5px 10px 5px 0;
-} */
-
-ul {
-  list-style-type: none;
-}
-
-ul>li,
-ol>li {
-  padding: 10px 0;
-  break-inside: avoid
 }
 
 .btn {
